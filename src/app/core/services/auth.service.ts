@@ -35,7 +35,7 @@ export class AuthService {
   saveToken(token: string): void {
     if (typeof window !== 'undefined') { localStorage.setItem('jwtToken', token); }
   }
-
+//comment
   getToken(): string | null {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('jwtToken');
