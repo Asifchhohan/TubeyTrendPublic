@@ -1,0 +1,77 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="affiliates-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>Affiliates</h1>
+      <p class="lead">Partner with TubeyTrend and earn by introducing creators to our suite of creator tools and training.</p>
+    </div>
+
+    <div class="opening footer-card">
+      <h3>Affiliate program</h3>
+      <p class="summary">Partner with TubeyTrend and earn by introducing creators to our suite of creator tools and training. High commission rates, simple tracking and monthly payouts.</p>
+      <ul class="benefits">
+        <li>Competitive commission on subscriptions</li>
+        <li>Dedicated partner support</li>
+        <li>Marketing assets and promotional playbooks</li>
+      </ul>
+      <a routerLink="/product/affiliates" class="apply">Learn more</a>
+    </div>
+
+    <section class="content opening">
+      <h3>Why join the affiliate program?</h3>
+      <p>High commission rates, simple tracking and monthly payouts. Help creators discover tools like the <a routerLink="/ai-thumbnail-generator">Thumbnail Generator</a> and <a routerLink="/trending-topics-finder">Trending Topics Finder</a>.</p>
+
+      <h4>Benefits</h4>
+      <ul>
+        <li>Competitive commission on subscriptions</li>
+        <li>Dedicated partner support</li>
+        <li>Marketing assets and promotional playbooks</li>
+      </ul>
+
+      <h4>Related resources</h4>
+      <p>Check out our <a routerLink="/blog/views">blog post on recent trends</a> and our <a routerLink="/pricing">pricing</a> to better recommend plans to creators.</p>
+    </section>
+
+    <section class="success-stories opening">
+      <h4>Success stories</h4>
+      <p>Affiliates who focused on small creator communities drove 3–5x higher conversions than broad outreach campaigns. Our partners have access to conversion reports and promotional assets.</p>
+    </section>
+
+    <section class="faq opening">
+      <h4>FAQ</h4>
+      <p><strong>How do I get paid?</strong> Monthly payouts via bank transfer or PayPal, with clear tracking in your partner dashboard.</p>
+      <p><strong>Are promo assets provided?</strong> Yes — banners, email templates, and example social copy are available.</p>
+    </section>
+
+    <section class="contact opening">
+      <h4>Get started</h4>
+      <p>Email <a href="mailto:partners&#64;tubeytrend.com">partners&#64;tubeytrend.com</a> with a short intro and any performance targets; we’ll reply within 48 hours and help you get set up.</p>
+      <p class="cta"><a routerLink="/pricing" class="apply">See partner-friendly plans</a></p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div>
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-affiliates">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>Affiliates</h1>
+      <p class="lead">Join our affiliate program — earn for every creator you bring.</p>
+    </div>
+    <div class="mobile-content opening">
+      <div class="opening-card">
+        <h3>Affiliate program</h3>
+        <p class="summary">Join our affiliate program — earn for every creator you bring. High commission rates and dedicated partner support.</p>
+        <a routerLink="/product/affiliates" class="apply">Learn more</a>
+      </div>
+
+      <p>Quick benefits: commission, marketing assets, partner support.</p>
+      <a routerLink="/pricing" class="cta">See plans</a>
+      <p class="contact">Email <a href="mailto:partners&#64;tubeytrend.com">partners&#64;tubeytrend.com</a></p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

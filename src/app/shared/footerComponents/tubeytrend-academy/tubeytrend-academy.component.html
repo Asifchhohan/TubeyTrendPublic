@@ -1,0 +1,37 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="academy-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>TubeyTrend Academy</h1>
+      <p class="lead">Short courses, playbooks and weekly workshops to help creators test ideas and grow faster.</p>
+    </div>
+    <section class="courses opening">
+      <h4>Popular courses</h4>
+      <ul>
+        <li>Creating click-worthy hooks and thumbnails</li>
+        <li>Audience-first video planning and retention</li>
+        <li>Sustainable channel growth strategies</li>
+        <li>Weekly 1-hour workshops with templates and playbooks</li>
+      </ul>
+
+      <p>See our practical guides in the <a routerLink="/blog/all-tips-insights">All Tips & Insights</a> section.</p>
+
+      <p class="cta">Enroll now: <a href="mailto:academy@tubeytrend.com">academy&#64;tubeytrend.com</a></p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-academy">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>Academy</h1>
+      <p class="lead">Short playbooks and weekly challenges for creators.</p>
+    </div>
+    <div class="mobile-content opening">Enroll in our free weekly workshops and get practical templates to test with your channel.</div>
+  </main>
+  <app-footer></app-footer>
+</div>

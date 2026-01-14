@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>Top Trending YouTube Channels - TubeyTrend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.search-bar-container[_ngcontent-ng-c1594234383] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2437;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 33px;
+}
+.search-bar[_ngcontent-ng-c1594234383] {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 8px 15px;
+  width: 300px;
+}
+.search-icon[_ngcontent-ng-c1594234383] {
+  font-size: 16px;
+  color: #888;
+  margin-right: 8px;
+}
+.search-bar[_ngcontent-ng-c1594234383]   input[_ngcontent-ng-c1594234383] {
+  border: none;
+  background: transparent;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+.share-icons[_ngcontent-ng-c1594234383] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.share-icons[_ngcontent-ng-c1594234383]   i[_ngcontent-ng-c1594234383] {
+  font-size: 18px;
+  cursor: pointer;
+}
+.share-icons[_ngcontent-ng-c1594234383]   i[_ngcontent-ng-c1594234383]:hover {
+  color: #1da1f2;
+}
+.trending-container[_ngcontent-ng-c1594234383] {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+}
+header[_ngcontent-ng-c1594234383] {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header[_ngcontent-ng-c1594234383]   h1[_ngcontent-ng-c1594234383] {
+  font-size: 32px;
+  font-weight: bold;
+}
+header[_ngcontent-ng-c1594234383]   p[_ngcontent-ng-c1594234383] {
+  font-size: 16px;
+  color: #bbb;
+}
+.signup-banner[_ngcontent-ng-c1594234383] {
+  background: #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.signup-banner[_ngcontent-ng-c1594234383]   .signup-text[_ngcontent-ng-c1594234383]   h3[_ngcontent-ng-c1594234383] {
+  color: #fff;
+  font-size: 20px;
+}
+.signup-banner[_ngcontent-ng-c1594234383]   .signup-button[_ngcontent-ng-c1594234383] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content-wrapper[_ngcontent-ng-c1594234383] {
+  display: flex;
+  gap: 20px;
+}
+.sidebar[_ngcontent-ng-c1594234383] {
+  width: 30%;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383] {
+  background: #1e1e3f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   h3[_ngcontent-ng-c1594234383] {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   ul[_ngcontent-ng-c1594234383] {
+  list-style: none;
+  padding: 0;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   ul[_ngcontent-ng-c1594234383]   li[_ngcontent-ng-c1594234383] {
+  margin-bottom: 10px;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   ul[_ngcontent-ng-c1594234383]   li[_ngcontent-ng-c1594234383]   a[_ngcontent-ng-c1594234383] {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   ul[_ngcontent-ng-c1594234383]   li[_ngcontent-ng-c1594234383]   span[_ngcontent-ng-c1594234383] {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+}
+.sidebar[_ngcontent-ng-c1594234383]   .articles-card[_ngcontent-ng-c1594234383]   .view-all[_ngcontent-ng-c1594234383] {
+  background: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.channels-table[_ngcontent-ng-c1594234383] {
+  width: 70%;
+}
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383] {
+  width: 100%;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+}
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383]   th[_ngcontent-ng-c1594234383], 
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383]   td[_ngcontent-ng-c1594234383] {
+  padding: 12px 15px;
+}
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383]   th[_ngcontent-ng-c1594234383] {
+  background: #333;
+  color: #bbb;
+}
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383]   tbody[_ngcontent-ng-c1594234383]   tr[_ngcontent-ng-c1594234383] {
+  border-bottom: 1px solid #444;
+}
+.channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383]   .channel-logo[_ngcontent-ng-c1594234383] {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.trending-container1[_ngcontent-ng-c1594234383] {
+  background-color: #111827;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+.title[_ngcontent-ng-c1594234383] {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.ad-banner[_ngcontent-ng-c1594234383] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2563EB;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.ad-content[_ngcontent-ng-c1594234383] {
+  color: white;
+}
+.ad-text[_ngcontent-ng-c1594234383] {
+  font-size: 18px;
+  font-weight: bold;
+}
+.ad-subtext[_ngcontent-ng-c1594234383] {
+  font-size: 14px;
+}
+.signup-btn[_ngcontent-ng-c1594234383] {
+  background-color: white;
+  color: #111827;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.google-icon[_ngcontent-ng-c1594234383] {
+  width: 16px;
+  height: 16px;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+.description[_ngcontent-ng-c1594234383] {
+  font-size: 14px;
+  background-color: #1E293B;
+  padding: 15px;
+  border-radius: 8px;
+}
+.description[_ngcontent-ng-c1594234383]   a[_ngcontent-ng-c1594234383] {
+  color: #3B82F6;
+  text-decoration: none;
+}
+.sidebar-card[_ngcontent-ng-c1594234383] {
+  background-color: #121826;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 425px;
+}
+h2[_ngcontent-ng-c1594234383] {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+ul[_ngcontent-ng-c1594234383] {
+  list-style: none;
+  padding: 0;
+}
+li[_ngcontent-ng-c1594234383] {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #1f2937;
+}
+li[_ngcontent-ng-c1594234383]:last-child {
+  border-bottom: none;
+}
+.icon[_ngcontent-ng-c1594234383] {
+  color: #22c55e;
+  margin-right: 8px;
+}
+a[_ngcontent-ng-c1594234383] {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+a[_ngcontent-ng-c1594234383]:hover {
+  color: #22c55e;
+}
+.category-card[_ngcontent-ng-c1594234383] {
+  background-color: #121826;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 425px;
+  margin-top: 20px;
+}
+.category-header[_ngcontent-ng-c1594234383] {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+ul[_ngcontent-ng-c1594234383] {
+  list-style: none;
+  padding: 0;
+}
+li[_ngcontent-ng-c1594234383] {
+  padding: 10px 0;
+}
+a[_ngcontent-ng-c1594234383] {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+a[_ngcontent-ng-c1594234383]:hover {
+  color: #22c55e;
+}
+.country-card[_ngcontent-ng-c1594234383] {
+  background-color: #121826;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 425px;
+  margin-top: 20px;
+}
+.country-header[_ngcontent-ng-c1594234383] {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+ul[_ngcontent-ng-c1594234383] {
+  list-style: none;
+  padding: 0;
+}
+li[_ngcontent-ng-c1594234383] {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+img[_ngcontent-ng-c1594234383] {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.about-card[_ngcontent-ng-c1594234383] {
+  background-color: #121826;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 425px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.about-header[_ngcontent-ng-c1594234383] {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+p[_ngcontent-ng-c1594234383] {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.cta-button[_ngcontent-ng-c1594234383] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0094ff;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.cta-button[_ngcontent-ng-c1594234383]:hover {
+  background-color: #007acc;
+}
+.ctagoogle-icon[_ngcontent-ng-c1594234383] {
+  width: 40px;
+  height: 40px;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+.signup-card[_ngcontent-ng-c1594234383] {
+  background-color: #2374e1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 423px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.vidiq-logo[_ngcontent-ng-c1594234383] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .trending-container[_ngcontent-ng-c1594234383] {
+    padding: 12px;
+  }
+  .search-bar-container[_ngcontent-ng-c1594234383] {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .search-bar[_ngcontent-ng-c1594234383] {
+    width: 100%;
+  }
+  .share-icons[_ngcontent-ng-c1594234383] {
+    justify-content: flex-start;
+  }
+  .content-wrapper[_ngcontent-ng-c1594234383] {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sidebar[_ngcontent-ng-c1594234383] {
+    width: 100%;
+    order: 2;
+  }
+  .channels-table[_ngcontent-ng-c1594234383] {
+    width: 100%;
+    order: 1;
+  }
+  .channels-table[_ngcontent-ng-c1594234383]   table[_ngcontent-ng-c1594234383] {
+    display: none;
+  }
+  .channels-list[_ngcontent-ng-c1594234383] {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .channel-card[_ngcontent-ng-c1594234383] {
+    width: 100%;
+    max-width: 520px;
+    background:
+      linear-gradient(
+        180deg,
+        #0f172a,
+        #071026);
+    color: #e6eef8;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .channel-row[_ngcontent-ng-c1594234383] {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .channel-row[_ngcontent-ng-c1594234383]   .rank[_ngcontent-ng-c1594234383] {
+    font-weight: 700;
+    color: #fff;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 0.95rem;
+  }
+  .channel-row[_ngcontent-ng-c1594234383]   .info[_ngcontent-ng-c1594234383] {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 0;
+  }
+  .channel-row[_ngcontent-ng-c1594234383]   .name[_ngcontent-ng-c1594234383] {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  .channel-row[_ngcontent-ng-c1594234383]   .meta[_ngcontent-ng-c1594234383] {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ad-banner[_ngcontent-ng-c1594234383] {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .signup-btn[_ngcontent-ng-c1594234383], 
+   .signup-button1[_ngcontent-ng-c1594234383], 
+   .google-signup-btn[_ngcontent-ng-c1594234383] {
+    width: 100%;
+    max-width: 100%;
+  }
+  .trending-container[_ngcontent-ng-c1594234383] {
+    padding-bottom: 220px;
+  }
+}
+h2[_ngcontent-ng-c1594234383] {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+p[_ngcontent-ng-c1594234383] {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.signup-button1[_ngcontent-ng-c1594234383] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.google-logo[_ngcontent-ng-c1594234383] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.signup-button1[_ngcontent-ng-c1594234383]:hover {
+  background-color: #f0f0f0;
+}
+/*# sourceMappingURL=toptrendingyoutubechannels.component.css.map */</style><meta name="description" content="Top trending YouTube channels â discover creators, view counts, and trending insights to inspire your next video."><style ng-app-id="ng">
+
+header[_ngcontent-ng-c4184604692] {
+  background-color: rgb(13, 17, 27);
+  padding: 15px 0;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.nav-container[_ngcontent-ng-c4184604692] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.logo[_ngcontent-ng-c4184604692] {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.logo[_ngcontent-ng-c4184604692]:hover {
+  color: #bbbcc1;
+}
+.blue-text[_ngcontent-ng-c4184604692] {
+  color: #2aa8f2;
+}
+.titles[_ngcontent-ng-c4184604692] {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+nav[_ngcontent-ng-c4184604692]   ul[_ngcontent-ng-c4184604692]   li[_ngcontent-ng-c4184604692] {
+  position: relative;
+  margin: 0 10px;
+}
+nav[_ngcontent-ng-c4184604692]   ul[_ngcontent-ng-c4184604692]   li[_ngcontent-ng-c4184604692]   a[_ngcontent-ng-c4184604692], 
+nav[_ngcontent-ng-c4184604692]   ul[_ngcontent-ng-c4184604692]   li[_ngcontent-ng-c4184604692]   button[_ngcontent-ng-c4184604692] {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.headerTextFont[_ngcontent-ng-c4184604692]:hover {
+  color: #bbbcc1 !important;
+}
+.dropdown[_ngcontent-ng-c4184604692] {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content[_ngcontent-ng-c4184604692] {
+  display: none;
+  position: absolute;
+  background-color: rgb(13, 17, 27);
+  min-width: 226px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content[_ngcontent-ng-c4184604692]   a[_ngcontent-ng-c4184604692] {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
+.dropdown-content[_ngcontent-ng-c4184604692]   a[_ngcontent-ng-c4184604692]:hover {
+  background-color: #2d2f39;
+}
+.dropdown[_ngcontent-ng-c4184604692]:hover   .dropdown-content[_ngcontent-ng-c4184604692] {
+  display: block;
+}
+.loginbutton[_ngcontent-ng-c4184604692] {
+  background-color: #2d2f39;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+.loginbutton[_ngcontent-ng-c4184604692]:hover {
+  background-color: #3a3d4b;
+}
+.mobile-header[_ngcontent-ng-c4184604692] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: rgb(13, 17, 27);
+  z-index: 1100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+.mobile-nav[_ngcontent-ng-c4184604692] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 12px 0;
+  height: 100%;
+}
+.mobile-actions[_ngcontent-ng-c4184604692]   button[_ngcontent-ng-c4184604692] {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+.mobile-menu-overlay[_ngcontent-ng-c4184604692] {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1099;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10px;
+}
+.mobile-menu-list[_ngcontent-ng-c4184604692] {
+  width: 90%;
+  max-width: 420px;
+  background: #0d111b;
+  border-radius: 10px;
+  padding: 16px;
+  list-style: none;
+}
+.mobile-menu-list[_ngcontent-ng-c4184604692]   li[_ngcontent-ng-c4184604692] {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.mobile-menu-list[_ngcontent-ng-c4184604692]   a[_ngcontent-ng-c4184604692], 
+.mobile-menu-list[_ngcontent-ng-c4184604692]   button[_ngcontent-ng-c4184604692] {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+.mobile-menu-header[_ngcontent-ng-c4184604692] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .titles[_ngcontent-ng-c4184604692] {
+    display: none;
+  }
+}
+.mobile-section[_ngcontent-ng-c4184604692] {
+  margin-bottom: 6px;
+}
+.section-toggle[_ngcontent-ng-c4184604692] {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nested-list[_ngcontent-ng-c4184604692] {
+  list-style: none;
+  padding-left: 12px;
+  margin: 6px 0 12px 0;
+}
+.nested-list[_ngcontent-ng-c4184604692]   li[_ngcontent-ng-c4184604692] {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.chev[_ngcontent-ng-c4184604692] {
+  opacity: 0.9;
+}
+/*# sourceMappingURL=header.component.css.map */</style><style ng-app-id="ng">
+
+.footer[_ngcontent-ng-c3162344679] {
+  background-color: #0c0e13;
+  color: white;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+}
+.footer-container[_ngcontent-ng-c3162344679] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-left[_ngcontent-ng-c3162344679] {
+  flex: 1;
+  max-width: 30%;
+}
+.footer-logo[_ngcontent-ng-c3162344679] {
+  font-size: 28px;
+  font-weight: bold;
+}
+.blue-text[_ngcontent-ng-c3162344679] {
+  color: #2aa8f2;
+}
+.footer-description[_ngcontent-ng-c3162344679] {
+  font-size: 14px;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+.copyright[_ngcontent-ng-c3162344679] {
+  font-size: 12px;
+  color: #aaa;
+}
+.footer-links[_ngcontent-ng-c3162344679] {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+}
+.footer-column[_ngcontent-ng-c3162344679]   h3[_ngcontent-ng-c3162344679] {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer-column[_ngcontent-ng-c3162344679]   ul[_ngcontent-ng-c3162344679] {
+  list-style: none;
+  padding: 0;
+}
+.footer-column[_ngcontent-ng-c3162344679]   ul[_ngcontent-ng-c3162344679]   li[_ngcontent-ng-c3162344679] {
+  margin-bottom: 8px;
+}
+.footer-column[_ngcontent-ng-c3162344679]   ul[_ngcontent-ng-c3162344679]   li[_ngcontent-ng-c3162344679]   a[_ngcontent-ng-c3162344679] {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer-column[_ngcontent-ng-c3162344679]   ul[_ngcontent-ng-c3162344679]   li[_ngcontent-ng-c3162344679]   a[_ngcontent-ng-c3162344679]:hover {
+  color: white;
+}
+.footer-right[_ngcontent-ng-c3162344679] {
+  flex: 1;
+  max-width: 20%;
+  margin-top: 61px;
+}
+.footer-right[_ngcontent-ng-c3162344679]   h3[_ngcontent-ng-c3162344679] {
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer-right[_ngcontent-ng-c3162344679]   p[_ngcontent-ng-c3162344679] {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.social-icons[_ngcontent-ng-c3162344679] {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social-icons[_ngcontent-ng-c3162344679]   a[_ngcontent-ng-c3162344679] {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+.social-icons[_ngcontent-ng-c3162344679]   a[_ngcontent-ng-c3162344679]:hover {
+  color: #2aa8f2;
+}
+@media (max-width: 1024px) {
+  .footer-container[_ngcontent-ng-c3162344679] {
+    flex-direction: column;
+  }
+  .footer-left[_ngcontent-ng-c3162344679], 
+   .footer-right[_ngcontent-ng-c3162344679], 
+   .footer-links[_ngcontent-ng-c3162344679] {
+    max-width: 100%;
+    text-align: center;
+  }
+  .footer-links[_ngcontent-ng-c3162344679] {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .social-icons[_ngcontent-ng-c3162344679] {
+    justify-content: center;
+  }
+}
+.mobile-footer[_ngcontent-ng-c3162344679] {
+  background: #0d111b;
+  color: white;
+  padding: 18px 12px;
+}
+.mobile-footer-top[_ngcontent-ng-c3162344679] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.mobile-description[_ngcontent-ng-c3162344679] {
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.mobile-section[_ngcontent-ng-c3162344679] {
+  margin-bottom: 8px;
+}
+.section-toggle[_ngcontent-ng-c3162344679] {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 8px 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nested-list[_ngcontent-ng-c3162344679] {
+  list-style: none;
+  padding-left: 12px;
+  margin-top: 8px;
+}
+.nested-list[_ngcontent-ng-c3162344679]   li[_ngcontent-ng-c3162344679] {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.mobile-socials[_ngcontent-ng-c3162344679] {
+  margin-top: 12px;
+}
+.mobile-footer[_ngcontent-ng-c3162344679]   .social-icons[_ngcontent-ng-c3162344679]   a[_ngcontent-ng-c3162344679] {
+  color: white;
+  margin-right: 10px;
+}
+.setfooterLinkTopMargin[_ngcontent-ng-c3162344679] {
+  margin-top: 62px;
+  margin-left: 100px;
+}
+/*# sourceMappingURL=footer.component.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c3984273398="" ng-version="18.2.13" ngh="3" ng-server-context="ssr"><router-outlet _ngcontent-ng-c3984273398=""></router-outlet><app-toptrendingyoutubechannels _nghost-ng-c1594234383="" ngh="2"><app-header _ngcontent-ng-c1594234383="" _nghost-ng-c4184604692="" ngh="0"><div _ngcontent-ng-c4184604692=""><header _ngcontent-ng-c4184604692=""><nav _ngcontent-ng-c4184604692=""><div _ngcontent-ng-c4184604692="" class="nav-container"><h2 _ngcontent-ng-c4184604692="" class="logo">Tubey<span _ngcontent-ng-c4184604692="" class="blue-text">Trend</span></h2><ul _ngcontent-ng-c4184604692="" class="titles"><li _ngcontent-ng-c4184604692="" class="dropdown"><button _ngcontent-ng-c4184604692="" class="headerTextFont">Features <i _ngcontent-ng-c4184604692="" class="fa fa-chevron-down dropdownIcon"></i></button><div _ngcontent-ng-c4184604692="" class="dropdown-content"><a _ngcontent-ng-c4184604692="" routerlink="/viral-video-ideas" ng-reflect-router-link="/viral-video-ideas" href="/viral-video-ideas">Trending Video Ideas</a><a _ngcontent-ng-c4184604692="" routerlink="/trending-topics-finder" ng-reflect-router-link="/trending-topics-finder" href="/trending-topics-finder">Trending Topics Finder</a><a _ngcontent-ng-c4184604692="" routerlink="/title-generator" ng-reflect-router-link="/title-generator" href="/title-generator">Title Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/competitor-insights" ng-reflect-router-link="/competitor-insights" href="/competitor-insights">Competitor Insights</a><a _ngcontent-ng-c4184604692="" routerlink="/content-optimizer" ng-reflect-router-link="/content-optimizer" href="/content-optimizer">Content Optimizer</a><a _ngcontent-ng-c4184604692="" routerlink="/overview" ng-reflect-router-link="/overview" href="/overview">All Features </a></div></li><li _ngcontent-ng-c4184604692="" class="dropdown"><button _ngcontent-ng-c4184604692="" class="headerTextFont">AI Tools <i _ngcontent-ng-c4184604692="" class="fa fa-chevron-down dropdownIcon"></i></button><div _ngcontent-ng-c4184604692="" class="dropdown-content"><a _ngcontent-ng-c4184604692="" routerlink="/ai-thumbnail-generator" ng-reflect-router-link="/ai-thumbnail-generator" href="/ai-thumbnail-generator">AI Thumbnail Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/channel-name-generator" ng-reflect-router-link="/channel-name-generator" href="/channel-name-generator">Channel Name Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/content-generator" ng-reflect-router-link="/content-generator" href="/content-generator">Content Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/chatgpt-for-youtubers" ng-reflect-router-link="/chatgpt-for-youtubers" href="/chatgpt-for-youtubers">ChatGPT for YouTubers</a><a _ngcontent-ng-c4184604692="" routerlink="/viral-video-ideas" ng-reflect-router-link="/viral-video-ideas" href="/viral-video-ideas">Trending YouTube Video Ideas Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/trending-keywords-hashtags" ng-reflect-router-link="/trending-keywords-hashtags" href="/trending-keywords-hashtags">Trending Keyword Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/video-script-creator" ng-reflect-router-link="/video-script-creator" href="/video-script-creator">Video Script Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/seo-optimized-descriptions" ng-reflect-router-link="/seo-optimized-descriptions" href="/seo-optimized-descriptions">AI Description Generator</a><a _ngcontent-ng-c4184604692="" routerlink="/trending-keywords-hashtags" ng-reflect-router-link="/trending-keywords-hashtags" href="/trending-keywords-hashtags">Trending Tag Generator</a></div></li><li _ngcontent-ng-c4184604692=""><button _ngcontent-ng-c4184604692="" class="headerTextFont">Top Trending YouTube Channels</button></li><li _ngcontent-ng-c4184604692=""><a _ngcontent-ng-c4184604692="" routerlink="/coaching" class="headerTextFont" ng-reflect-router-link="/coaching" href="/coaching">Coaching</a></li><li _ngcontent-ng-c4184604692=""><a _ngcontent-ng-c4184604692="" routerlink="/extension" class="headerTextFont" ng-reflect-router-link="/extension" href="/extension">Extension</a></li><li _ngcontent-ng-c4184604692="" class="dropdown"><button _ngcontent-ng-c4184604692="" class="headerTextFont">Blog <i _ngcontent-ng-c4184604692="" class="fa fa-chevron-down dropdownIcon"></i></button><div _ngcontent-ng-c4184604692="" class="dropdown-content"><a _ngcontent-ng-c4184604692="" routerlink="/blog/views" ng-reflect-router-link="/blog/views" href="/blog/views">Views</a><a _ngcontent-ng-c4184604692="" routerlink="/blog/monetization" ng-reflect-router-link="/blog/monetization" href="/blog/monetization">Monetization</a><a _ngcontent-ng-c4184604692="" routerlink="/blog/subscribers" ng-reflect-router-link="/blog/subscribers" href="/blog/subscribers">Subscribers</a><a _ngcontent-ng-c4184604692="" routerlink="/blog/analytics" ng-reflect-router-link="/blog/analytics" href="/blog/analytics">Analytics</a><a _ngcontent-ng-c4184604692="" routerlink="/blog/all-tips-insights" ng-reflect-router-link="/blog/all-tips-insights" href="/blog/all-tips-insights">All Tips &amp; Insights</a></div></li><li _ngcontent-ng-c4184604692=""><button _ngcontent-ng-c4184604692="" class="headerTextFont">Pricing</button></li><button _ngcontent-ng-c4184604692="" class="headerTextFont loginbutton">Login</button></ul></div></nav></header></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-header><div _ngcontent-ng-c1594234383="" class="trending-container"><div _ngcontent-ng-c1594234383="" class="search-bar-container"><div _ngcontent-ng-c1594234383="" class="search-bar"><span _ngcontent-ng-c1594234383="" class="search-icon">ð</span><input _ngcontent-ng-c1594234383="" type="text" placeholder="Enter YouTube channel name" ng-reflect-model="" value="" class="ng-untouched ng-pristine ng-valid"></div><div _ngcontent-ng-c1594234383="" class="share-icons"><span _ngcontent-ng-c1594234383="">share on:</span><i _ngcontent-ng-c1594234383="" class="fab fa-twitter"></i><i _ngcontent-ng-c1594234383="" class="fab fa-facebook"></i><i _ngcontent-ng-c1594234383="" class="fab fa-whatsapp"></i><i _ngcontent-ng-c1594234383="" class="fas fa-link"></i></div></div><div _ngcontent-ng-c1594234383="" class="trending-container1"><h1 _ngcontent-ng-c1594234383="" class="title">Top Trending 100 YouTube Channels</h1><div _ngcontent-ng-c1594234383="" class="ad-banner"><div _ngcontent-ng-c1594234383="" class="ad-content"><p _ngcontent-ng-c1594234383="" class="ad-text"><strong _ngcontent-ng-c1594234383="">Boost Your YouTube Success with AI</strong></p><p _ngcontent-ng-c1594234383="" class="ad-subtext">Unlock viral video ideas and optimize your content effortlessly with AI.</p></div><button _ngcontent-ng-c1594234383="" class="signup-btn"><img _ngcontent-ng-c1594234383="" src="assets/googleIcon.png" alt="Google Logo" class="google-icon"> Sign up for FREE </button></div><p _ngcontent-ng-c1594234383="" class="description"> Discover trending YouTube video ideas with AI-driven insights. <a _ngcontent-ng-c1594234383="" href="https://vidIQ.com/youtube-stats" target="_blank">TubeyTrend.com/youtube-stats</a> Stay ahead of the competition by generating viral content, optimizing your videos, and boosting your channel growth effortlessly. </p></div><div _ngcontent-ng-c1594234383="" class="content-wrapper"><div _ngcontent-ng-c1594234383="" class="sidebar"><div _ngcontent-ng-c1594234383="" class="articles-card"><h3 _ngcontent-ng-c1594234383="">Recent Articles</h3><ul _ngcontent-ng-c1594234383=""><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">YouTube Monetization Update: Key Changes for Video Ads</a><span _ngcontent-ng-c1594234383="">Published 4 days ago</span></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">YouTube Automation: Get AI-Powered Titles, Thumbnails, Descriptions</a><span _ngcontent-ng-c1594234383="">Published 7 days ago</span></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">YouTube Watch Time: 10 Ways to Reach 4,000 Hours</a><span _ngcontent-ng-c1594234383="">Published 9 days ago</span></li></ul><button _ngcontent-ng-c1594234383="" class="view-all">View all</button></div><div _ngcontent-ng-c1594234383="" class="signup-card"><h1 _ngcontent-ng-c1594234383="" class="vidiq-logo">TubeyTrend</h1><h2 _ngcontent-ng-c1594234383="">AI-Powered YouTube Video Idea Generator</h2><p _ngcontent-ng-c1594234383="">Join the millions of creators using AI-Powered YouTube Video Idea Generator today</p><button _ngcontent-ng-c1594234383="" class="signup-button1"><img _ngcontent-ng-c1594234383="" src="assets/googleIcon.png" alt="Google Logo" class="google-icon"> Sign up for FREE </button></div><div _ngcontent-ng-c1594234383="" class="sidebar-card"><h2 _ngcontent-ng-c1594234383="">Top YouTube Channels</h2><ul _ngcontent-ng-c1594234383=""><li _ngcontent-ng-c1594234383=""><span _ngcontent-ng-c1594234383="" class="icon">ð</span><a _ngcontent-ng-c1594234383="" href="#">Top 50 Channels</a></li><li _ngcontent-ng-c1594234383=""><span _ngcontent-ng-c1594234383="" class="icon">ð</span><a _ngcontent-ng-c1594234383="" href="#">Top 100 Channels</a></li><li _ngcontent-ng-c1594234383=""><span _ngcontent-ng-c1594234383="" class="icon">ð</span><a _ngcontent-ng-c1594234383="" href="#">Top 500 Channels</a></li></ul></div><div _ngcontent-ng-c1594234383="" class="category-card"><div _ngcontent-ng-c1594234383="" class="category-header">Top 100 by Category</div><ul _ngcontent-ng-c1594234383=""><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Autos &amp; Vehicles</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Education</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Entertainment</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Food</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Gaming</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Lifestyle</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Music</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">News &amp; Politics</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Pets &amp; Animals</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Sports</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Technology</a></li><li _ngcontent-ng-c1594234383=""><a _ngcontent-ng-c1594234383="" href="#">Travel</a></li></ul></div><div _ngcontent-ng-c1594234383="" class="country-card"><div _ngcontent-ng-c1594234383="" class="country-header">Top 100 by Country</div><ul _ngcontent-ng-c1594234383=""><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\pakistan-flag.avif" alt="Pakistan Flag"> Pakistan </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\United_States.png" alt="US Flag"> United States </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\United_Kingdom.webp" alt="UK Flag"> United Kingdom </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag_of_Canada.png" alt="Canada Flag"> Canada </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag-India.webp" alt="India Flag"> India </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag_of_Brazil.svg.png" alt="Brazil Flag"> Brazil </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag_of_Germany.svg.webp" alt="Germany Flag"> Germany </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag_of_Australia_(converted).svg.png" alt="Australia Flag"> Australia </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\japanese-flag-of-japan-round-corners-png.webp" alt="Japan Flag"> Japan </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag_of_Spain.svg.webp" alt="Spain Flag"> Spain </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag-France.webp" alt="France Flag"> France </li><li _ngcontent-ng-c1594234383=""><img _ngcontent-ng-c1594234383="" src="assets\Flag-Turkey.webp" alt="Turkey Flag"> Turkey </li></ul></div><div _ngcontent-ng-c1594234383="" class="about-card"><div _ngcontent-ng-c1594234383="" class="about-header">About TubeyTrend</div><p _ngcontent-ng-c1594234383=""> Unlock the power of AI to generate viral YouTube video ideas, boost engagement, and grow your audience effortlessly! </p><p _ngcontent-ng-c1594234383=""><strong _ngcontent-ng-c1594234383="">Your Ultimate AI YouTube Growth Assistant!</strong></p><p _ngcontent-ng-c1594234383=""> Discover trending topics, create compelling video titles, and optimize your content for maximum reach. Our AI-driven tools analyze the latest trends to give you the best video ideas tailored to your niche. </p><p _ngcontent-ng-c1594234383=""> Stay ahead of the competition with data-driven insights and AI-powered content strategies. Get started now and take your YouTube growth to the next level! </p><button _ngcontent-ng-c1594234383="" class="cta-button"><img _ngcontent-ng-c1594234383="" src="assets/googleIcon.png" alt="Google Logo" class="ctagoogle-icon"> Get started for FREE </button></div></div><div _ngcontent-ng-c1594234383="" class="channels-table"><table _ngcontent-ng-c1594234383=""><thead _ngcontent-ng-c1594234383=""><tr _ngcontent-ng-c1594234383=""><th _ngcontent-ng-c1594234383="">Rank</th><th _ngcontent-ng-c1594234383="">Channel</th><th _ngcontent-ng-c1594234383="">Videos</th><th _ngcontent-ng-c1594234383="">Subscribers</th><th _ngcontent-ng-c1594234383="">Views</th></tr></thead><tbody _ngcontent-ng-c1594234383=""><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#1</td><td _ngcontent-ng-c1594234383=""> MrBeast </td><td _ngcontent-ng-c1594234383="">929</td><td _ngcontent-ng-c1594234383="">454M</td><td _ngcontent-ng-c1594234383="">103.9B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#2</td><td _ngcontent-ng-c1594234383=""> T-Series </td><td _ngcontent-ng-c1594234383="">25K</td><td _ngcontent-ng-c1594234383="">308M</td><td _ngcontent-ng-c1594234383="">323.7B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#3</td><td _ngcontent-ng-c1594234383=""> Cocomelon - Nursery Rhymes </td><td _ngcontent-ng-c1594234383="">1.8K</td><td _ngcontent-ng-c1594234383="">199M</td><td _ngcontent-ng-c1594234383="">214.6B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#4</td><td _ngcontent-ng-c1594234383=""> SET India </td><td _ngcontent-ng-c1594234383="">163.6K</td><td _ngcontent-ng-c1594234383="">188M</td><td _ngcontent-ng-c1594234383="">184.4B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#5</td><td _ngcontent-ng-c1594234383=""> Vlad and Niki </td><td _ngcontent-ng-c1594234383="">975</td><td _ngcontent-ng-c1594234383="">148M</td><td _ngcontent-ng-c1594234383="">116.1B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#6</td><td _ngcontent-ng-c1594234383=""> â¿ Kids Diana Show </td><td _ngcontent-ng-c1594234383="">1.5K</td><td _ngcontent-ng-c1594234383="">137M</td><td _ngcontent-ng-c1594234383="">121.3B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#7</td><td _ngcontent-ng-c1594234383=""> Zee Music Company </td><td _ngcontent-ng-c1594234383="">15.4K</td><td _ngcontent-ng-c1594234383="">121M</td><td _ngcontent-ng-c1594234383="">84.2B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#8</td><td _ngcontent-ng-c1594234383=""> WWE </td><td _ngcontent-ng-c1594234383="">89.9K</td><td _ngcontent-ng-c1594234383="">112M</td><td _ngcontent-ng-c1594234383="">100.6B</td></tr><tr _ngcontent-ng-c1594234383=""><td _ngcontent-ng-c1594234383="">#9</td><td _ngcontent-ng-c1594234383=""> PewDiePie </td><td _ngcontent-ng-c1594234383="">4.7K</td><td _ngcontent-ng-c1594234383="">110M</td><td _ngcontent-ng-c1594234383="">29.4B</td></tr><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></tbody></table></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><app-footer _ngcontent-ng-c1594234383="" _nghost-ng-c3162344679="" ngh="1"><div _ngcontent-ng-c3162344679=""><footer _ngcontent-ng-c3162344679="" class="footer"><div _ngcontent-ng-c3162344679="" class="footer-container"><div _ngcontent-ng-c3162344679="" class="footer-left"><h2 _ngcontent-ng-c3162344679="" class="footer-logo">Trending<span _ngcontent-ng-c3162344679="" class="blue-text">Tube</span></h2><p _ngcontent-ng-c3162344679="" class="footer-description"> At AI-Powered YouTube Video Idea Generator, we empower creators with AI-driven insights and viral trends to maximize their reach. Our cutting-edge technology delivers high-impact video ideas, SEO-optimized titles, and audience-focused descriptions. From beginners to pro YouTubers, our AI analyzes trends, predicts engagement, and streamlines content creation, so you never run out of ideas. No more guessworkâjust smart, data-driven inspiration to help you grow faster and smarter! </p><p _ngcontent-ng-c3162344679="" class="copyright">Â© 2025 TubeyTrend. All Rights Reserved.</p></div><div _ngcontent-ng-c3162344679="" class="footer-links setfooterLinkTopMargin"><div _ngcontent-ng-c3162344679="" class="footer-column"><h3 _ngcontent-ng-c3162344679="">Company</h3><ul _ngcontent-ng-c3162344679=""><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Careers</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Testimonials</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Blog</a></li></ul></div><div _ngcontent-ng-c3162344679="" class="footer-column"><h3 _ngcontent-ng-c3162344679="">Product</h3><ul _ngcontent-ng-c3162344679=""><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Affiliates</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">YouTube Stats</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Brand Solutions</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Agency Solutions</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">MCN Solutions</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Browser Extension</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">TubeyTrend Academy</a></li></ul></div><div _ngcontent-ng-c3162344679="" class="footer-column"><h3 _ngcontent-ng-c3162344679="">Other</h3><ul _ngcontent-ng-c3162344679=""><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Contact</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Terms</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Privacy</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">Support</a></li><li _ngcontent-ng-c3162344679=""><a _ngcontent-ng-c3162344679="" href="#">How To Get More YouTube Views</a></li></ul></div></div><div _ngcontent-ng-c3162344679="" class="footer-right"><h3 _ngcontent-ng-c3162344679="">Connect with us</h3><p _ngcontent-ng-c3162344679="">Call Sales +92301-0622282-TubeyTrend</p><div _ngcontent-ng-c3162344679="" class="social-icons"><a _ngcontent-ng-c3162344679="" href="#"><i _ngcontent-ng-c3162344679="" class="fa-brands fa-youtube"></i></a><a _ngcontent-ng-c3162344679="" href="#"><i _ngcontent-ng-c3162344679="" class="fa-brands fa-facebook"></i></a><a _ngcontent-ng-c3162344679="" href="#"><i _ngcontent-ng-c3162344679="" class="fa-brands fa-instagram"></i></a><a _ngcontent-ng-c3162344679="" href="#"><i _ngcontent-ng-c3162344679="" class="fa-brands fa-twitter"></i></a><a _ngcontent-ng-c3162344679="" href="#"><i _ngcontent-ng-c3162344679="" class="fa-brands fa-linkedin"></i></a></div></div></div></footer></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-footer></app-toptrendingyoutubechannels><!--container--></app-root>
+  <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
+
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"887957274":{"b":[{"channelName":"MrBeast","subscriberCount":454000000,"videoCount":"929","viewCount":"103874789930","rank":1},{"channelName":"T-Series","subscriberCount":308000000,"videoCount":"25013","viewCount":"323697168518","rank":2},{"channelName":"Cocomelon - Nursery Rhymes","subscriberCount":199000000,"videoCount":"1838","viewCount":"214618764678","rank":3},{"channelName":"SET India","subscriberCount":188000000,"videoCount":"163554","viewCount":"184357048152","rank":4},{"channelName":"Vlad and Niki","subscriberCount":148000000,"videoCount":"975","viewCount":"116138102334","rank":5},{"channelName":"â¿ Kids Diana Show","subscriberCount":137000000,"videoCount":"1502","viewCount":"121336796419","rank":6},{"channelName":"Zee Music Company","subscriberCount":121000000,"videoCount":"15377","viewCount":"84210651177","rank":7},{"channelName":"WWE","subscriberCount":112000000,"videoCount":"89887","viewCount":"100623216790","rank":8},{"channelName":"PewDiePie","subscriberCount":110000000,"videoCount":"4653","viewCount":"29443757524","rank":9}],"h":{},"s":200,"st":"OK","u":"http://localhost:8002/api/Youtube/GetTopChannels","rt":"json"},"__nghData__":[{"t":{"0":"t155","2":"t156"},"c":{"0":[{"i":"t155","r":1}],"2":[]}},{"t":{"0":"t160","2":"t161"},"c":{"0":[{"i":"t160","r":1}],"2":[]}},{"t":{"179":"t157","181":"t159"},"c":{"179":[{"i":"t157","r":1,"t":{"15":"t158"},"c":{"15":[{"i":"t158","r":1,"x":9}]}}],"181":[]}},{"c":{"0":[{"i":"c1594234383","r":1}]}}]}</script></body></html>

@@ -1,0 +1,35 @@
+<!-- Desktop sidebar (hidden on mobile) -->
+<div *ngIf="!(isMobile$ | async)" #sidebar class="w-64 bg-white shadow-lg fixed top-20 bottom-10 overflow-y-auto rounded-lg setMargin" [class.left-10]="position==='left'" [class.right-10]="position==='right'">
+  <ul class="py-4">
+    <li 
+      *ngFor="let item of menuItems"
+      [class.active]="item.path === activeItem"
+      class="px-6 py-3 cursor-pointer hover:bg-gray-100 transition"
+    >
+      <a 
+        [routerLink]="item.path"
+        (click)="onNavClick(item, $event)"
+        class="text-gray-700 font-semibold text-lg"
+      >
+        {{ item.name }}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Mobile toggle and drawer -->
+<div class="mobile-side-wrapper" *ngIf="isMobile$ | async" [class.right]="position==='right'">
+  <!-- <button class="mobile-sidebar-button" (click)="toggleMobileSidebar()" aria-label="Open menu">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <div class="mobile-drawer-overlay" *ngIf="mobileOpen" (click)="toggleMobileSidebar()"></div>
+
+  <nav class="mobile-drawer" *ngIf="mobileOpen" (click)="$event.stopPropagation()" [class.right]="position==='right'">
+    <ul>
+      <li *ngFor="let item of menuItems" [class.active]="item.path === activeItem">
+        <a [routerLink]="item.path" (click)="onNavClick(item, $event)">{{ item.name }}</a>
+      </li>
+    </ul>
+  </nav> -->
+</div>

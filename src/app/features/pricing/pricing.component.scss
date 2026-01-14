@@ -1,0 +1,218 @@
+.pricing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.plans-wrapper {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: #181818;
+    color: white;
+    padding: 20px;
+    /* If you want a fixed sidebar, uncomment:
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    */
+  }
+  
+  /* Main Plans Container */
+  .plans-container {
+    flex: 1;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      margin-left: 675px;
+    }
+  
+    .plans-row {
+     display: flex;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    /* margin-bottom: 20px; */
+    /* margin-left: 400px; */
+    justify-content: center;
+    }
+  
+    .plan-card {
+      background: #171717;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      .plan-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        h2 {
+          margin: 0;
+          font-size: 18px;
+        }
+  
+        .trial-badge {
+          background: #2a92e9;
+          color: white;
+          font-size: 10px;
+          padding: 3px 6px;
+          border-radius: 4px;
+        }
+      }
+  
+      .price {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+  
+        span {
+          font-size: 14px;
+          font-weight: normal;
+          color: #bbb;
+          margin-left: 5px;
+        }
+      }
+  
+      .billing-info {
+        font-size: 12px;
+        color: #888;
+        margin: 0 0 10px;
+      }
+  
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+  
+        li {
+          font-size: 12px;
+          color: #ccc;
+          padding-left: 15px;
+          position: relative;
+  
+          &::before {
+            // content: '\\2713'; /* checkmark icon */
+            position: absolute;
+            left: 0;
+            color: #2a92e9;
+          }
+        }
+      }
+  
+      .reminder-box {
+        background: #222;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #bbb;
+        padding: 10px;
+        text-align: center;
+      }
+  
+        /* layout for actions */
+        .action-btn { background: linear-gradient(90deg,#3b82f6,#6366f1); border: none; color: white; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+        .view-all-btn { background: transparent; border: 1px solid #2b2b2b; color: #cbd5e1; padding: 8px 10px; border-radius: 10px; cursor: pointer; margin-top: 14px; }
+        .start-btn { background: linear-gradient(90deg,#10b981,#06b6d4); }
+        .coaching-card { border-left: 4px solid #f97316; }
+    }
+  
+    .boost-card {
+      background: linear-gradient(90deg, #6149d9, #2a92e9);
+      color: white;
+    }
+  
+    .coaching-card {
+      background: linear-gradient(90deg, #6a1b9a, #ab47bc); /* optional gradient */
+    }
+  
+    .action-row { display:flex; gap:14px; justify-content:center; margin-top:18px; }
+
+    .view-all-btn {
+      display: inline-flex; align-items: center; gap:10px;
+      padding: 12px 20px; font-size: 15px; font-weight: 600;
+      border-radius: 999px; border: none; cursor: pointer; color: #fff;
+      box-shadow: 0 6px 18px rgba(10,12,20,0.6);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      background: linear-gradient(90deg,#374151,#2a2a3c);
+    }
+
+    .view-all-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(10,12,20,0.7); }
+
+    .view-all-btn.boost-action { background: linear-gradient(90deg,#10b981,#06b6d4); }
+    .view-all-btn.coaching-action { background: linear-gradient(90deg,#f97316,#fb923c); }
+    .view-all-btn.neutral-action { background: linear-gradient(90deg,#374151,#2a2a3c); }
+
+    .view-all-btn i { opacity: 0.95; }
+
+    .inline-success { margin-top: 12px; background: #063f21; color: #d1fae5; padding: 10px 12px; border-radius: 8px; display: inline-flex; gap: 10px; align-items: center; }
+    .inline-success .ok-btn { background: transparent; border: 1px solid rgba(255,255,255,0.08); color: #d1fae5; padding: 6px 8px; border-radius: 6px; cursor: pointer; }
+
+    .modal-content { padding: 4px 0; }
+    .inline-checkout { margin-top: 14px; }
+    .inline-all-plans { margin-top: 14px; }
+
+    /* Toast */
+    .toast { position: fixed; right: 20px; top: 20px; background: #052e0f; color: #e6ffed; padding: 10px 14px; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.5); z-index: 1300; display:flex; gap:10px; align-items:center; }
+    .toast .toast-msg { flex: 1; }
+    .toast .toast-ok { background: transparent; border: 1px solid rgba(255,255,255,0.08); color: #e6ffed; padding: 6px 8px; border-radius: 6px; cursor:pointer; }
+    .toast.ng-enter { opacity: 0; transform: translateY(-8px); }
+    .toast.ng-enter-active { opacity: 1; transform: none; transition: all 240ms ease-in; }
+    .toast.ng-leave { opacity: 1; }
+    .toast.ng-leave-active { opacity: 0; transform: translateY(-8px); transition: all 240ms ease-out; }
+  }
+  
+  /* Example to color the Boost or Coaching card differently */
+  .boost-card {
+    /* If you want to color the 'Boost' card specifically, use this class or .boost-card in HTML */
+  }
+  
+  @media (max-width: 768px) {
+    .plans-wrapper {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      position: static;
+    }
+  
+    .plans-container {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 56px; /* leave room for fixed mobile header */
+      padding-bottom: 100px; /* room for footer to be visible */
+  
+      h1 { margin-left: 0; text-align: center; font-size: 22px; }
+  
+      .plans-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 0 12px;
+      }
+
+      .plan-card { width: 94%; max-width: 420px; }
+
+      .action-row { flex-direction: column; gap: 12px; }
+
+      .view-all-btn { width: 100%; justify-content: center; }
+    }
+  }
+  

@@ -1,0 +1,633 @@
+body{
+      width: 100%;
+    display: grid;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2437;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 33px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 300px;
+  }
+  
+  .search-icon {
+    font-size: 16px;
+    color: #888;
+    margin-right: 8px;
+  }
+  
+  .search-bar input {
+    border: none;
+    background: transparent;
+    color: white;
+    width: 100%;
+    outline: none;
+  }
+  
+  .share-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+  }
+  
+  .share-icons i {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .share-icons i:hover {
+    color: #1da1f2; /* Twitter blue */
+  }
+  
+
+// Dark Theme Background
+.trending-container {
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+    padding: 40px;
+  }
+  
+  // Header Styling
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #bbb;
+    }
+  }
+  
+  // Signup Banner
+  .signup-banner {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  
+    .signup-text h3 {
+      color: #fff;
+      font-size: 20px;
+    }
+  
+    .signup-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  // Content Layout
+  .content-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  
+  // Sidebar Articles
+  .sidebar {
+    width: 30%;
+  
+    .articles-card {
+      background: #1e1e3f;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 10px;
+          
+          a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+          }
+  
+          span {
+            display: block;
+            font-size: 12px;
+            color: #aaa;
+          }
+        }
+      }
+  
+      .view-all {
+        background: black;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  // Trending Channels Table
+  .channels-table {
+    width: 70%;
+    
+    table {
+      width: 100%;
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+  
+      th, td {
+        padding: 12px 15px;
+      }
+  
+      th {
+        background: #333;
+        color: #bbb;
+      }
+  
+      tbody tr {
+        border-bottom: 1px solid #444;
+      }
+  
+      .channel-logo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+  
+
+
+
+
+  .trending-container1 {
+    background-color: #111827;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .ad-banner {
+    display: flex;
+    // display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2563EB;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .ad-content {
+    color: white;
+  }
+  
+  .ad-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .ad-subtext {
+    font-size: 14px;
+  }
+  
+  .signup-btn {
+    background-color: white;
+    color: #111827;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .google-icon {
+    width: 16px;
+    height: 16px;
+     /* Override global styles */
+  display: inline-block !important; 
+  vertical-align: middle !important;
+  }
+  
+  .description {
+    font-size: 14px;
+    background-color: #1E293B;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .description a {
+    color: #3B82F6;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .sidebar-card {
+    background-color: #121826;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    // width: 260px;
+    width: 425px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #1f2937;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  .icon {
+    color: #22c55e;
+    margin-right: 8px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #22c55e;
+  }
+  
+ 
+  
+
+
+
+
+
+  .category-card {
+    background-color: #121826;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 425px;
+    margin-top: 20px;
+  }
+  
+  .category-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #22c55e;
+  }
+  
+
+
+
+
+  .country-card {
+    background-color: #121826;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 425px;
+    margin-top: 20px;
+  }
+  
+  .country-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  img {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  
+
+
+  .about-card {
+    background-color: #121826;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 425px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .about-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  
+  .cta-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0094ff;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .cta-button:hover {
+    background-color: #007acc;
+  }
+  .ctagoogle-icon {
+    width: 40px;
+    height: 40px;
+    //  /* Override global styles */
+  display: inline-block !important; 
+  vertical-align: middle !important;
+  }
+
+
+
+
+  .signup-card {
+    background-color: #2374e1;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 423px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .vidiq-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+
+/* Mobile responsiveness: center cards and stack layout */
+@media (max-width: 768px) {
+  .trending-container { padding: 12px; }
+  .search-bar-container { flex-direction: column; gap: 12px; align-items: stretch; }
+  .search-bar { width: 100%; }
+  .share-icons { justify-content: flex-start; }
+
+  .content-wrapper { flex-direction: column; gap: 12px; }
+  .sidebar { width: 100%; order: 2; }
+  .channels-table { width: 100%; order: 1; }
+
+  /* Hide table on mobile, show card list styles */
+  .channels-table table { display: none; }
+  .channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .channel-card {
+    width: 100%;
+    max-width: 520px;
+    background: linear-gradient(180deg,#0f172a,#071026);
+    color: #e6eef8;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    border: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .channel-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .channel-row .rank {
+    font-weight: 700;
+    color: #fff;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    font-size: 0.95rem;
+  }
+
+  .channel-row .info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 0; /* allow truncation */
+  }
+
+  .channel-row .name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  .channel-row .meta {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Ensure signup buttons and banners expand */
+  .ad-banner { flex-direction: column; align-items: stretch; gap: 12px; }
+  .signup-btn, .signup-button1, .google-signup-btn { width: 100%; max-width: 100%; }
+
+  /* Footer safety */
+  .trending-container { padding-bottom: 220px; }
+
+  /* Extra small screen adjustments: center content inside cards */
+  @media (max-width: 420px) {
+    .channel-card { padding: 12px; }
+    .channel-row { justify-content: flex-start; }
+    .channel-row .info { align-items: center; text-align: center; }
+    .channel-row .name, .channel-row .meta { white-space: normal; overflow: visible; }
+  }
+
+  /* Additional mobile-view tweaks */
+  .mobile-view {
+    .mobile-header { text-align: center; margin-bottom: 12px; }
+    .mobile-sidebar { display:flex; flex-direction:column; gap:12px; align-items:center; margin-top: 14px; }
+    .mobile-sidebar .signup-card, .mobile-sidebar .articles-card { width: 100%; max-width: 520px; }
+    .channels-list { padding-bottom: 8px; }
+  }
+}
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .signup-button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .signup-button1:hover {
+    background-color: #f0f0f0;
+  }
+  

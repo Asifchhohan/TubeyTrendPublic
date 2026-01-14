@@ -1,0 +1,50 @@
+<div *ngIf="!(isMobile$ | async)" class="blog-page">
+  <app-header></app-header>
+  <main class="container">
+    <h1>Blog — Insights for YouTube Creators</h1>
+    <p class="lead">Actionable guides, case studies and experiments to help creators increase views, subscribers, and revenue.</p>
+
+    <section class="featured">
+      <article class="featured-post">
+        <h2><a routerLink="/blog/views">Featured: What Drives Views in 2025</a></h2>
+        <p>We analyzed recent viral videos and share exact framing strategies and experiments you can run this week.</p>
+      </article>
+    </section>
+
+    <section class="posts" style="background: #0f172a;">
+      <article class="post">
+        <h3><a routerLink="/blog/views">YouTube Views: Recent Trends</a></h3>
+        <p>Understand what helps a video catch fire in 2025 — short checklist and examples.</p>
+      </article>
+
+      <article class="post">
+        <h3><a routerLink="/blog/monetization">Maximizing Revenue</a></h3>
+        <p>Strategies to increase ad revenue, sponsorships and diversify income.</p>
+      </article>
+
+      <article class="post">
+        <h3><a routerLink="/blog/subscribers">Grow Subscribers Faster</a></h3>
+        <p>Tactical tips for turning one-time viewers into repeat subscribers.</p>
+      </article>
+
+      <article class="post">
+        <h3><a routerLink="/blog/analytics">Analytics That Matter</a></h3>
+        <p>Which metrics to track and how to interpret them to make better videos.</p>
+      </article>
+    </section>
+  </main> 
+  <app-footer></app-footer>
+</div>
+
+<div *ngIf="isMobile$ | async" class="mobile-blog">
+  <app-header></app-header>
+  <main class="container">
+    <h1>Blog</h1>
+
+    <div class="post-card"><a routerLink="/blog/views">YouTube Views: Recent Trends — featured</a></div>
+    <div class="post-card"><a routerLink="/blog/monetization">Maximizing Revenue</a></div>
+    <div class="post-card"><a routerLink="/blog/subscribers">Grow Subscribers Faster</a></div>
+    <div class="post-card"><a routerLink="/blog/analytics">Analytics That Matter</a></div>
+  </main>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,14 @@
+.page-wrapper { margin-top: 100px; padding: 28px 16px; color:#e6f0ff }
+.content { max-width:900px; margin:0 auto;background: #0f172a;  padding:22px; border-radius:12px; box-shadow:0 10px 26px rgba(2,6,23,0.6); color:#e6f0ff }
+.content-mobile { padding:14px; margin:12px;background: #0f172a; border-radius:8px; color:#e6f0ff }
+
+ul { margin-left:18px }
+.faq-list li { margin-bottom:12px }
+.faq-list strong { display:block; color:#ffffff }
+.contact-cta { margin-top:16px }
+.btn-link { color:#60a5fa; font-weight:600 }
+
+/* responsive */
+.desktop-only{display:block}
+.mobile-only{display:none}
+@media (max-width:767px){.desktop-only{display:none}.mobile-only{display:block}}

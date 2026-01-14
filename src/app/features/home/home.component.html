@@ -1,0 +1,212 @@
+<app-header></app-header>
+<div *ngIf="!(isMobile$ | async)" class="home-container">
+    <div class="hero-section">
+        <h1>Boost your views with <span>AI-Powered Video Ideas</span></h1>
+        <p class="setMargin">Discover the best AI-driven tools to generate viral video ideas and optimize your content.</p>
+        
+        <button class="google-signup-btn" (click)="signUpWithGoogle()">
+            <img src="assets/googleIcon.png" alt="Google Logo" />
+            Sign Up for Free
+        </button>
+    </div>
+
+    <div class="content-section">
+        <div class="text-content">
+            <h2>Create engaging content with <span>AI-powered suggestions.</span></h2>
+            <p>Generate high-performing titles, scripts, and ideas to accelerate your video creation process.</p>
+            <button class="generate-btn" (click)="generateVideoIdeas()">Generate Video Ideas</button>
+        </div>
+        <div class="image-content" style="height: 500px; width: 500px;">
+            <img src="assets/tubeyTrendPermotion.png" alt="AI Video Idea Generator" />
+        </div>
+    </div>
+
+    <div class="keyword-container">
+        <div class="keyword-content">
+            <div class="image-section" style="height: 500px; width: 500px;">
+                <img src="assets/keywordsEnhancement.png" alt="AI Keyword Research" />
+            </div>
+
+            <div class="text-section">
+                <h2>Enhance visibility with <span>AI-driven keywords.</span></h2>
+                <p>Find the best keywords to boost your reach and maximize video performance.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <span class="icon">📈</span>
+                        <div>
+                            <h4>AI-Powered Trends</h4>
+                            <p>Identify trending topics in your niche with AI insights.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span class="icon">⏳</span>
+                        <div>
+                            <h4>Keyword Optimization</h4>
+                            <p>Discover the most effective keywords for your videos.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span class="icon">🔗</span>
+                        <div>
+                            <h4>AI-Suggested Keywords</h4>
+                            <p>Unlock new keyword opportunities for increased visibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="explore-btn" (click)="exploreKeywords()">Find Best Keywords</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-container">
+        <div class="header">
+            <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <p>10k+ Creators Trust Our AI</p>
+            </div>
+            <h2>Trusted by content creators worldwide</h2>
+        </div>
+
+        <div class="testimonials">
+            <button class="nav-btn left-btn">←</button>
+
+            <div class="testimonial-cards">
+                <div class="testimonial">
+                    <p>“This AI tool helped me discover fresh content ideas and improve engagement.”</p>
+                    <div class="user-info">
+                        <img src="assets/creator1.png" alt="Creator 1" />
+                        <div>
+                            <h4>Creator Name</h4>
+                            <p>2M Subscribers • 150M Views</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn right-btn">→</button>
+        </div>
+    </div>
+
+    <div class="video-ideas-container">
+        <h1>Generate personalized video ideas with AI.</h1>
+        <p>AI-driven insights to create viral content effortlessly.</p>
+      
+        <div class="content">
+          <div class="features">
+            <div class="feature">
+              <span class="icon">⏩</span>
+              <h3>AI Daily Ideas</h3>
+              <p>Get fresh, AI-generated video ideas every day.</p>
+            </div>
+            <div class="feature">
+              <span class="icon">👁️</span>
+              <h3>Predict Future Trends</h3>
+              <p>AI-driven forecasts to maximize your reach.</p>
+            </div>
+            <div class="feature">
+              <span class="icon">🚀</span>
+              <h3>Discover Hidden Opportunities</h3>
+              <p>Find untapped content ideas tailored to your niche.</p>
+            </div>
+            <button class="cta-btn" (click)="findVideoIdeas()">Get Your AI Ideas</button>
+          </div>
+<!--       
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/your-video-id"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div> -->
+           <div class="image-section" style="height: 500px; width: 500px;">
+                <img src="assets/TrendingIdeas.png" alt="AI Keyword Research" />
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-box">
+          <div class="chat-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+      
+          <div class="chat-messages">
+            <div class="message user-message">How can I get more views?</div>
+            <div class="system-message">✔ Analyzing your content...</div>
+            <div class="message bot-message">
+              AI suggests focusing on <strong>high-engagement topics</strong> like trending challenges and tutorials.
+            </div>
+          </div>
+      
+          <div class="chat-input">
+            <input type="text" placeholder="Ask AI anything..." />
+            <button>➤</button>
+          </div>
+        </div>
+      
+        <div class="chat-info">
+          <h1>Your AI-powered video coach.</h1>
+          <p>Personalized content strategy to grow your channel.</p>
+          <button class="start-chatting">Start Chatting</button>
+        </div>
+    </div>
+
+    <div class="channel-growth">
+        <h1>Accelerate your YouTube growth</h1>
+        <p>Join thousands of creators using AI for video success.</p>
+        
+        <button class="signup-btn" (click)="signUpWithGoogle()">
+            <img src="assets/googleIcon.png" alt="Google Logo"class="google-icon" />
+          Get Started for Free
+        </button>
+    </div>
+</div>
+
+<!-- Mobile simplified layout -->
+<div *ngIf="isMobile$ | async" class="home-mobile">
+  <div class="mobile-hero">
+    <h1>AI-Powered Video Ideas</h1>
+    <p>Quickly generate trending ideas and optimize metadata.</p>
+    <button class="google-signup-btn" (click)="signUpWithGoogle()">
+      <img src="assets/googleIcon.png" alt="Google Logo" />
+      Sign Up Free
+    </button>
+  </div>
+
+  <div class="mobile-features">
+    <div class="feature-card">
+      <h4>AI-Powered Trends</h4>
+      <p>Discover rising topics in your niche.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Keyword Optimization</h4>
+      <p>Find high-impact keywords.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Video Ideas</h4>
+      <p>Generate daily ideas tailored to your channel.</p>
+    </div>
+  </div>
+
+  <div class="mobile-video">
+    <div class="responsive-iframe">
+      <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="mobile-cta">
+    <button class="cta-btn">Get Your AI Ideas</button>
+    <button class="signup-btn" (click)="signUpWithGoogle()">Get Started</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

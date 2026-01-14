@@ -1,0 +1,66 @@
+.active {
+  background-color: #f3f4f6; /* Light gray background */
+  font-weight: bold;
+  border-left: 4px solid rgba(0, 102, 255, 0.5); /* Blue left border */
+}
+
+
+  .left-10 {
+    left: 14.5rem !important;
+}
+.right-10 {
+    left: 14.5rem !important;
+}
+.setMargin{
+  margin-top: 80px;
+  /* smooth push-up when footer appears */
+  transition: bottom 220ms ease;
+}
+
+/* Mobile sidebar button */
+.mobile-sidebar-button {
+  position: fixed;
+  top: 90px;
+  left: 12px;
+  z-index: 1200;
+  background: #0d111b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.mobile-side-wrapper.right .mobile-sidebar-button { left: auto; right: 12px; }
+
+/* Drawer overlay */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1190;
+}
+
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  max-width: 340px;
+  background: #0d111b;
+  z-index: 1200;
+  padding-top: 80px;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+}
+
+.mobile-drawer.right { left: auto; right: 0; box-shadow: -2px 0 8px rgba(0,0,0,0.4); }
+
+.mobile-drawer ul { list-style: none; margin: 0; padding: 8px 12px; }
+.mobile-drawer li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.mobile-drawer a { color: white; font-weight: 700; text-decoration: none; display:block; }

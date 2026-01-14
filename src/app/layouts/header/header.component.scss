@@ -1,0 +1,213 @@
+
+/* Header Styling */
+header {
+  background-color: rgb(13, 17, 27);
+  padding: 15px 0;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Navbar Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.logo:hover {
+  color: #bbbcc1;
+}
+
+.blue-text {
+  color: #2aa8f2; /* Light blue color like vidIQ */
+}
+
+/* Navigation Items */
+.titles {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  // margin-right: 40px;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 10px;
+}
+
+/* Buttons and Links */
+nav ul li a,
+nav ul li button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.headerTextFont:hover {
+  color: #bbbcc1 !important;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(13, 17, 27);
+  min-width: 226px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: #2d2f39;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Login Button */
+.loginbutton {
+  background-color: #2d2f39;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.loginbutton:hover {
+  background-color: #3a3d4b;
+}
+
+/* Mobile header */
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px; /* explicit mobile header height */
+  background: rgb(13, 17, 27);
+  z-index: 1100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 12px 0;
+  height: 100%;
+}
+
+.mobile-actions button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 56px; /* height of mobile header */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1099;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.mobile-menu-list {
+  width: 90%;
+  max-width: 420px;
+  background: #0d111b;
+  border-radius: 10px;
+  padding: 16px;
+  list-style: none;
+}
+
+.mobile-menu-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.mobile-menu-list a, .mobile-menu-list button {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 8px;
+}
+
+/* Small improvement: make desktop menu hide on very small widths if needed (keeps desktop layout for larger screens) */
+@media (max-width: 768px) {
+  .titles { display: none; }
+}
+
+/* Mobile collapsible section styles */
+.mobile-section { margin-bottom: 6px; }
+.section-toggle { width: 100%; text-align: left; background: none; border: none; color: white; font-weight: 700; padding: 10px 0; display:flex; justify-content:space-between; align-items:center; }
+.nested-list { list-style: none; padding-left: 12px; margin: 6px 0 12px 0; }
+.nested-list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.chev { opacity: 0.9; }
+
+

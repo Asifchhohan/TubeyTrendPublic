@@ -1,0 +1,34 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="mcn-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>MCN Solutions</h1>
+      <p class="lead">Partner with TubeyTrend for multi-channel network (MCN) solutions — scaling operations, revenue reporting, and creator growth plays.</p>
+    </div>
+
+    <section class="offerings opening">
+      <h4>Offerings</h4>
+      <ul>
+        <li>Revenue share models and payout automation</li>
+        <li>Channel bundling and performance dashboards</li>
+        <li>Custom retention and growth playbooks</li>
+      </ul>
+
+      <p class="cta">Request a proposal: <a href="mailto:mcn@tubeytrend.com">mcn&#64;tubeytrend.com</a></p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-mcn">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>MCN Solutions</h1>
+      <p class="lead">Solutions and dashboards for multi-channel partners.</p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

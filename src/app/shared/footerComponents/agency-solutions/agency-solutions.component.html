@@ -1,0 +1,37 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="agency-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>Agency Solutions</h1>
+      <p class="lead">White-label dashboards and team workflows for agencies managing multiple creator partnerships.</p>
+    </div>
+    <section class="solutions opening">
+      <h4>Capabilities</h4>
+      <ul>
+        <li>Multi-account dashboards</li>
+        <li>Bulk reporting and automated alerts</li>
+        <li>Dedicated account manager options</li>
+        <li>Custom tagging and channel grouping</li>
+      </ul>
+
+      <p>We provide onboarding and weekly syncs for agency partners to ensure consistent reporting and performance reviews.</p>
+
+      <p class="cta">Contact our partnerships team: <a href="mailto:agency&#64;tubeytrend.com">agency&#64;tubeytrend.com</a></p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-agency">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>Agency Solutions</h1>
+      <p class="lead">Tools to help agencies manage many creators and measure campaign performance.</p>
+    </div>
+    <div class="mobile-content opening">Contact our team for enterprise pricing and dedicated onboarding.</div>
+  </main>
+  <app-footer></app-footer>
+</div>

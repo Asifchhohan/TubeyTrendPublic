@@ -1,0 +1,5 @@
+.modal-backdrop { position: fixed; inset: 0; background: rgba(2,6,23,0.6); display:flex; align-items:center; justify-content:center; }
+.modal { background: linear-gradient(180deg,#071528,#0b1f2b); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); color:#e6eef6; min-width:300px; }
+.modal h3 { margin:0 0 6px 0; }
+.modal p { color:#9aa6b2; margin:0 0 12px 0; }
+.modal button { background:#ef4444; border:none; color:white; padding:8px 12px; border-radius:8px; cursor:pointer; }

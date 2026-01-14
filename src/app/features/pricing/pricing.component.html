@@ -1,0 +1,87 @@
+<app-header></app-header>
+<div class="pricing-page">
+  <div class="plans-wrapper">
+    <!-- Left Sidebar -->
+    <!-- <app-dashboardsidebar class="sidebar"></app-dashboardsidebar> -->
+  
+    <!-- Main Plans Content -->
+    <div class="plans-container">
+      <h1>Plans</h1>
+  
+      <div class="plans-row">
+        <!-- Boost Card -->
+        <div class="plan-card boost-card">
+          <div class="plan-header">
+            <h2>Boost</h2>
+            <span class="trial-badge">7 DAY FREE TRIAL</span>
+          </div>
+          <p class="price">$16.58 <span>/month</span></p>
+          <p class="billing-info">12 month • $199</p>
+  
+          <ul class="features">
+            <li>Unlimited Inspiration &amp; Ideation</li>
+            <li>Optimize Your Videos for Peak Visibility</li>
+            <li>Masterclasses from Top Creators</li>
+            <li>Instant Channel Audit &amp; AI Coaching</li>
+          </ul>
+  
+          <div class="reminder-box">
+            We'll remind you 3 days before your trial ends!
+          </div>
+  
+          <button class="action-btn start-btn" (click)="startFree('boost')">
+            Start for Free <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+  
+        <!-- Coaching Card -->
+        <div class="plan-card coaching-card">
+          <h2>Coaching</h2>
+          <p class="price">$99 <span>/month</span></p>
+          <p class="billing-info">12 month • $1,188</p>
+  
+          <ul class="features">
+            <li>Weekday access to your 1-on-1 coach</li>
+            <li>Personal channel audit from your coach</li>
+            <li>Step-by-step Growth Plan to grow faster</li>
+            <li>Feedback on thumbnails, titles, videos</li>
+          </ul>
+  
+          <button class="action-btn upgrade-btn" (click)="goToCheckout('coaching')">
+            Upgrade to Coaching <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+  
+      <div class="action-row">
+        <button class="view-all-btn boost-action" (click)="startFree('boost')"><i class="fa-solid fa-rocket"></i> Start BOOST</button>
+        <button class="view-all-btn coaching-action" (click)="openInlineCheckout('coaching')"><i class="fa-solid fa-user-tie"></i> Start COACHING</button>
+        <button class="view-all-btn neutral-action" (click)="toggleAllPlans()"><i class="fa-solid fa-list"></i> View all plans</button>
+      </div>
+
+      <app-centered-modal *ngIf="showModal" (close)="closeModal()">
+        <div *ngIf="showInlineCheckout" class="modal-content">
+          <app-checkout-page [planIn]="checkoutPlan" (completed)="onCheckoutComplete()"></app-checkout-page>
+        </div>
+
+        <div *ngIf="showAllPlans" class="modal-content">
+          <app-view-all-plans (buyPlan)="openInlineCheckout($event)"></app-view-all-plans>
+        </div>
+      </app-centered-modal>
+
+      <!-- Toast -->
+      <div class="toast" *ngIf="showToast">
+        <span class="toast-msg">{{toastMessage}}</span>
+        <button class="toast-ok" (click)="toastOk()">OK</button>
+      </div>
+  
+      <!-- <p class="enterprise-link">
+        Do you manage multiple channels? <a href="#">Let's chat about Enterprise</a>
+      </p> -->
+    <!-- </div> -->
+  </div>
+
+  <!-- Footer -->
+  <app-footer *ngIf="(isMobile$ | async)"></app-footer>
+</div> 
+  

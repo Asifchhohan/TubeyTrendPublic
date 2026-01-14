@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove unexpected hard white backgrounds that hide text on dark UI */
+.container { background-color: transparent !important; }
+.post, .post-card, .card { background-color: transparent !important; }
+/* Keep layout spacing intact while ensuring text contrast */
+.container, .post, .post-card { color: inherit; }
+
+/* Footer components card styles — used across footerComponents */
+:root { --footer-accent: #2563EB; --footer-card-bg: #0f172a; --footer-card-bg-mobile: #071026; }
+
+.footer-card{ background: var(--footer-card-bg); padding:18px; border-radius:8px; color:#e6eef8; margin:12px 0; }
+.footer-card h1, .footer-card h3{ margin:0 0 8px; color:#fff; }
+.footer-card .lead, .footer-card .summary{ color:#cfd9e6; margin:6px 0; }
+.footer-card ul{ color:#cfd9e6; margin-left:18px }
+.footer-card .cta, .footer-card .apply{ display:inline-block; margin-top:10px; padding:8px 12px; background:var(--footer-accent); color:#fff; border-radius:6px; text-decoration:none }
+
+/* Mobile variant */
+.opening-card.footer-card{ background:var(--footer-card-bg-mobile); padding:14px; border-radius:8px; margin-bottom:12px }
+.opening-card.footer-card h1{ color:#fff }
+.opening-card.footer-card .lead{ color:#cfd9e6 }
+
+/* Accessibility: ensure minimum contrast for links inside footer cards */
+.footer-card a{ color:#9bd0ff }
+.footer-card a:hover{ text-decoration:underline }

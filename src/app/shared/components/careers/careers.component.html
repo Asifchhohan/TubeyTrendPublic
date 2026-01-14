@@ -1,0 +1,98 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="careers-page">
+  <app-header></app-header>
+  <main class="container desktop-careers">
+    <h1>Careers at TubeyTrend</h1>
+    <p class="lead">Join our small, fast-moving team — we build AI-first tools that help creators grow on YouTube. We value curiosity, user empathy and a strong bias toward shipping work that helps creators get results.</p>
+
+    <section class="openings">
+      <article class="opening">
+        <h3>Frontend Engineer</h3>
+        <p class="summary">Build our Angular app, improve mobile-first flows, and ship polished user experiences used by creators worldwide.</p>
+        <ul class="responsibilities">
+          <li>Ship responsive UI components and reusable libraries.</li>
+          <li>Collaborate with designers and product to raise product quality.</li>
+          <li>Improve performance and accessibility across pages.</li>
+        </ul>
+        <ul class="qualifications">
+          <li>3+ years building web apps (Angular preferred).</li>
+          <li>Strong JavaScript/TypeScript fundamentals and testing experience.</li>
+        </ul>
+        <a routerLink="/careers/frontend" class="apply">View details & apply</a>
+      </article>
+
+      <article class="opening">
+        <h3>ML Researcher</h3>
+        <p class="summary">Research and build models that detect emerging trends and suggest compelling video ideas.</p>
+        <ul class="responsibilities">
+          <li>Prototype models for trend detection and title/thumbnail scoring.</li>
+          <li>Work with product to run experiments and measure lift.</li>
+        </ul>
+        <ul class="qualifications">
+          <li>Experience with NLP/sequence models or recommender systems.</li>
+          <li>Familiarity with model evaluation and productionizing research.</li>
+        </ul>
+        <a routerLink="/careers/ml-researcher" class="apply">View details & apply</a>
+      </article>
+
+      <article class="opening">
+        <h3>Product Designer</h3>
+        <p class="summary">Design simple, delightful flows for creators — from idea discovery to publishing and analytics.</p>
+        <ul class="responsibilities">
+          <li>Own end-to-end design for features and A/B tests.</li>
+          <li>Run usability testing and iterate quickly on results.</li>
+        </ul>
+        <ul class="qualifications">
+          <li>Portfolio of consumer product designs, strong interaction skills.</li>
+          <li>Experience collaborating closely with engineering teams.</li>
+        </ul>
+        <a routerLink="/careers/product-designer" class="apply">View details & apply</a>
+      </article>
+    </section>
+
+    <section class="perks">
+      <h4>Perks & benefits</h4>
+      <ul>
+        <li>Competitive salary and flexible remote-first policy</li>
+        <li>Generous PTO, learning stipends, and equipment budget</li>
+        <li>Chance to impact millions of creators and ship quickly</li>
+      </ul>
+    </section>
+
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-careers">
+  <app-header></app-header>
+  <main class="container">
+    <h1>Careers</h1>
+    <p class="lead">Open roles at TubeyTrend — we're a small remote-friendly team shipping fast.</p>
+
+    <div class="mobile-openings">
+      <div class="opening-card">
+        <h3>Frontend Engineer</h3>
+        <p class="summary">Ship responsive, accessible UI and improve developer DX.</p>
+        <div class="meta">Remote · Full-time</div>
+        <a routerLink="/careers/frontend" class="apply">Details & apply</a>
+      </div>
+
+      <div class="opening-card">
+        <h3>ML Researcher</h3>
+        <p class="summary">Prototype and evaluate trend prediction models.</p>
+        <div class="meta">Remote · Full-time</div>
+        <a routerLink="/careers/ml-researcher" class="apply">Details & apply</a>
+      </div>
+
+      <div class="opening-card">
+        <h3>Product Designer</h3>
+        <p class="summary">Design flows creators love to use and return to.</p>
+        <div class="meta">Remote · Contract / Full-time</div>
+        <a routerLink="/careers/product-designer" class="apply">Details & apply</a>
+      </div>
+
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div> 

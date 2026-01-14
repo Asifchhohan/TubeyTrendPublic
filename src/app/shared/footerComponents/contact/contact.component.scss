@@ -1,0 +1,16 @@
+.page-wrapper { margin-top: 100px; padding: 28px 16px; background: linear-gradient(180deg,#f3f8ff,#ffffff); }
+.content { max-width: 900px; margin: 0 auto; background: #fff; padding: 28px; border-radius: 10px; box-shadow: 0 8px 24px rgba(12,38,63,0.06); }
+.content-mobile { padding: 16px; background: #fff; margin: 12px; border-radius: 8px; }
+.field { margin-bottom: 14px; }
+label { display:block; font-weight:600; margin-bottom:6px; }
+input, textarea { width:100%; padding:10px; border:1px solid #e6eefb; border-radius:6px; }
+.error { color:#c0392b; font-size:0.9em; margin-top:4px; }
+.btn-primary { background: #0b66ff; color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; }
+
+/* Responsive visibility helpers */
+.desktop-only { display:block; }
+.mobile-only { display:none; }
+@media (max-width: 767px) {
+	.desktop-only { display:none; }
+	.mobile-only { display:block; }
+}

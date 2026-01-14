@@ -1,0 +1,42 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="brand-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>Brand Solutions</h1>
+      <p class="lead">Custom campaigns and partnerships to grow awareness using our creator network and data-driven placements.</p>
+    </div>
+
+    <section class="services opening">
+      <h4>What we offer</h4>
+      <ul>
+        <li>Sponsored creator campaigns</li>
+        <li>Data-backed audience targeting</li>
+        <li>Campaign performance dashboards</li>
+        <li>Measurement and lift analysis</li>
+      </ul>
+      <p>Learn how to run effective creator campaigns in our <a routerLink="/blog/monetization">monetization guides</a>.</p>
+
+      <div class="case-study">
+        <h5>Case study</h5>
+        <p>We ran a targeted campaign for a product launch that reached 2M views across 12 creators and improved brand lift by 22%.</p>
+      </div>
+
+      <p class="cta">Contact our brand team: <a href="mailto:brands&#64;tubeytrend.com">brands&#64;tubeytrend.com</a></p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-brand">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>Brand Solutions</h1>
+      <p class="lead">Partner with creators to reach niche audiences and measure campaign lift.</p>
+    </div>
+    <div class="mobile-content opening">Contact <a href="mailto:brands&#64;tubeytrend.com">brands&#64;tubeytrend.com</a> to start a campaign.</div>
+  </main>
+  <app-footer></app-footer>
+</div>

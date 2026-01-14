@@ -1,0 +1,43 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="youtube-stats-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>YouTube Stats</h1>
+      <p class="lead">Explore in-depth statistics for channels and videos. Use our reports to find growth opportunities and benchmark against competitors.</p>
+    </div>
+
+    <section class="features opening">
+      <h4>Features</h4>
+      <ul>
+        <li>Channel and video analytics</li>
+        <li>Trend timelines and watch-time breakdown</li>
+        <li>Compare against similar channels</li>
+        <li>Exportable CSVs and scheduled reports</li>
+      </ul>
+      <p>Use case: scout topics that are gaining views this week and plan a series to capture early interest.</p>
+      <p>Related: <a routerLink="/ai-video-insights">AI Video Insights</a>, <a routerLink="/analytics">Analytics</a></p>
+      <p class="cta">Sign up for a demo: <a href="mailto:sales@tubeytrend.com">sales&#64;tubeytrend.com</a></p>
+    </section>
+
+    <section class="faq opening">
+      <h4>FAQ</h4>
+      <p><strong>Can I export data?</strong> Yes — CSV exports are available for all reports.</p>
+      <p><strong>Is historical data included?</strong> We keep 12 months of detailed metrics with aggregated 3-year trends.</p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-youtube-stats">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>YouTube Stats</h1>
+      <p class="lead">Quick channel snapshots and recent performance metrics.</p>
+    </div>
+    <div class="mobile-content opening">View dashboard or export CSVs to analyze trends offline.</div>
+  </main>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,39 @@
+<!-- Desktop -->
+<div *ngIf="!(isMobile$ | async)" class="extension-page">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening footer-card">
+      <h1>Browser Extension</h1>
+      <p class="lead">Install the TubeyTrend extension to get quick trending topics, title suggestions, and thumbnail previews while browsing YouTube.</p>
+    </div>
+    <section class="features opening">
+      <ul>
+        <li>Contextual trending topics for the current page</li>
+        <li>One-click title and thumbnail suggestions</li>
+        <li>Preview thumbnails at common aspect ratios</li>
+      </ul>
+
+      <h4>Quick start</h4>
+      <ol>
+        <li>Install the extension</li>
+        <li>Open any YouTube video or channel</li>
+        <li>Click the TubeyTrend icon to view title suggestions and trending topics</li>
+      </ol>
+
+      <p>Download from the Chrome Web Store (coming soon) or contact us for enterprise installs.</p>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div> 
+
+<!-- Mobile -->
+<div *ngIf="isMobile$ | async" class="mobile-extension">
+  <app-header></app-header>
+  <main class="container">
+    <div class="opening-card footer-card">
+      <h1>Browser Extension</h1>
+      <p class="lead">Quick suggestions and trending topics right inside YouTube pages.</p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

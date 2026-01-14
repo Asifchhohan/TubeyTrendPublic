@@ -1,0 +1,254 @@
+<app-header></app-header>
+<div class="trending-container">
+
+    <div class="search-bar-container">
+        <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Enter YouTube channel name" [(ngModel)]="searchQuery">
+        </div>
+        <div class="share-icons">
+            <span>share on:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fas fa-link"></i>
+        </div>
+    </div>
+
+    <div class="trending-container1">
+        <!-- Heading -->
+        <h1 class="title">Top Trending 100 YouTube Channels</h1>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner">
+
+            <div class="ad-content">
+                <p class="ad-text"><strong>Boost Your YouTube Success with AI</strong></p>
+                <p class="ad-subtext">Unlock viral video ideas and optimize your content effortlessly with AI.</p>
+            </div>
+            <button class="signup-btn" (click)="signUpWithGoogle()">
+                <img src="assets/googleIcon.png" alt="Google Logo" class="google-icon"/>                
+                Sign up for FREE
+            </button>
+        </div>
+
+        <!-- Description -->
+        <p class="description">
+            Discover trending YouTube video ideas with AI-driven insights.
+            <a href="https://vidIQ.com/youtube-stats" target="_blank">TubeyTrend.com/youtube-stats</a>
+            Stay ahead of the competition by generating viral content,
+            optimizing your videos, and boosting your channel growth effortlessly.
+        </p>
+    </div>
+
+    <!-- DESKTOP: full sidebar + table layout -->
+    <div class="desktop-view" *ngIf="!(isMobile$ | async)">
+      <div class="content-wrapper">
+        <!-- Recent Articles & Sidebar (desktop) -->
+        <div class="sidebar">
+            <div class="articles-card">
+                <h3>Recent Articles</h3>
+                <ul>
+                    <li>
+                        <a href="#">YouTube Monetization Update: Key Changes for Video Ads</a>
+                        <span>Published 4 days ago</span>
+                    </li>
+                    <li>
+                        <a href="#">YouTube Automation: Get AI-Powered Titles, Thumbnails, Descriptions</a>
+                        <span>Published 7 days ago</span>
+                    </li>
+                    <li>
+                        <a href="#">YouTube Watch Time: 10 Ways to Reach 4,000 Hours</a>
+                        <span>Published 9 days ago</span>
+                    </li>
+                </ul>
+                <button class="view-all">View all</button>
+            </div>
+
+            <div class="signup-card">
+                <h1 class="vidiq-logo">TubeyTrend</h1>
+                <h2>AI-Powered YouTube Video Idea Generator</h2>
+                <p>Join the millions of creators using AI-Powered YouTube Video Idea Generator today</p>
+
+                <button class="signup-button1" (click)="signUpWithGoogle()">
+                    <img src="assets/googleIcon.png" alt="Google Logo" class="google-icon"/>                
+                    Sign up for FREE
+                </button>
+            </div>
+
+            <div class="sidebar-card">
+                <h2>Top YouTube Channels</h2>
+                <ul>
+                    <li>
+                        <span class="icon">📈</span>
+                        <a href="#">Top 50 Channels</a>
+                    </li>
+                    <li>
+                        <span class="icon">📈</span>
+                        <a href="#">Top 100 Channels</a>
+                    </li>
+                    <li>
+                        <span class="icon">📈</span>
+                        <a href="#">Top 500 Channels</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header">Top 100 by Category</div>
+                <ul>
+                    <li><a href="#">Autos & Vehicles</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Gaming</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">News & Politics</a></li>
+                    <li><a href="#">Pets & Animals</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Travel</a></li>
+                </ul>
+            </div>
+
+            <div class="country-card">
+                <div class="country-header">Top 100 by Country</div>
+                <ul>
+                    <li>
+                        <img src="assets\pakistan-flag.avif" alt="Pakistan Flag" /> Pakistan
+                    </li>
+                    <li>
+                        <img src="assets\United_States.png" alt="US Flag" /> United States
+                    </li>
+                    <li>
+                        <img src="assets\United_Kingdom.webp" alt="UK Flag" /> United Kingdom
+                    </li>
+                    <li>
+                        <img src="assets\Flag_of_Canada.png" alt="Canada Flag" /> Canada
+                    </li>
+                    <li>
+                        <img src="assets\Flag-India.webp" alt="India Flag" /> India
+                    </li>
+                    <li>
+                        <img src="assets\Flag_of_Brazil.svg.png" alt="Brazil Flag" /> Brazil
+                    </li>
+                    <li>
+                        <img src="assets\Flag_of_Germany.svg.webp" alt="Germany Flag" /> Germany
+                    </li>
+                    <li>
+                        <img src="assets\Flag_of_Australia_(converted).svg.png" alt="Australia Flag" /> Australia
+                    </li>
+                    <li>
+                        <img src="assets\japanese-flag-of-japan-round-corners-png.webp" alt="Japan Flag" /> Japan
+                    </li>
+                    <li>
+                        <img src="assets\Flag_of_Spain.svg.webp" alt="Spain Flag" /> Spain
+                    </li>
+                    <li>
+                        <img src="assets\Flag-France.webp" alt="France Flag" /> France
+                    </li>
+                    <li>
+                        <img src="assets\Flag-Turkey.webp" alt="Turkey Flag" /> Turkey
+                    </li>
+                   
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <div class="about-header">About TubeyTrend</div>
+                <p>
+                    Unlock the power of AI to generate viral YouTube video ideas, boost engagement, and grow your
+                    audience effortlessly!
+                </p>
+                <p><strong>Your Ultimate AI YouTube Growth Assistant!</strong></p>
+                <p>
+                    Discover trending topics, create compelling video titles, and optimize your content for maximum
+                    reach.
+                    Our AI-driven tools analyze the latest trends to give you the best video ideas tailored to your
+                    niche.
+                </p>
+                <p>
+                    Stay ahead of the competition with data-driven insights and AI-powered content strategies.
+                    Get started now and take your YouTube growth to the next level!
+                </p>
+
+                <button class="cta-button" (click)="signUpWithGoogle()">
+                    <img src="assets/googleIcon.png" alt="Google Logo"class="ctagoogle-icon" />                
+                    Get started for FREE
+                </button>
+            </div>
+        </div>
+
+        <!-- Trending Channels Table (desktop) -->
+        <div class="channels-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Channel</th>
+                        <th>Videos</th>
+                        <th>Subscribers</th>
+                        <th>Views</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let channel of topChannels">
+                        <td>#{{ channel.rank }}</td>
+                        <td>
+                            <!-- <img [src]="channel.image" alt="Channel Logo" class="channel-logo" /> -->
+                            {{ channel.channelName }}
+                        </td>
+                        <td>{{ channel.videoCount | formatCount }}</td>
+                        <td>{{ channel.subscriberCount| formatCount }}</td>
+                        <td>{{ channel.viewCount| formatCount }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE: simplified stacked view + compact sidebar -->
+    <div class="mobile-view" *ngIf="(isMobile$ | async)">
+      <div class="mobile-header">
+        <!-- keep title and ad/banner condensed -->
+        <h1 class="title">Top Trending 100 YouTube Channels</h1>
+        <div class="ad-banner">
+          <div class="ad-content">
+            <p class="ad-text"><strong>Boost Your YouTube Success with AI</strong></p>
+          </div>
+          <button class="signup-btn" (click)="signUpWithGoogle()">Sign up for FREE</button>
+        </div>
+      </div>
+
+      <div class="channels-list">
+        <div class="channel-card" *ngFor="let channel of topChannels">
+          <div class="channel-row">
+            <div class="rank">#{{ channel.rank }}</div>
+            <div class="info">
+              <div class="name">{{ channel.channelName }}</div>
+              <div class="meta">{{ channel.videoCount | formatCount }} videos • {{ channel.subscriberCount | formatCount }} subs • {{ channel.viewCount | formatCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-sidebar">
+        <div class="signup-card">
+          <h2>TubeyTrend</h2>
+          <p>AI-Powered YouTube Video Idea Generator</p>
+          <button class="signup-button1" (click)="signUpWithGoogle()">Sign up for FREE</button>
+        </div>
+
+        <div class="articles-card">
+          <h3>Recent Articles</h3>
+          <ul>
+            <li><a href="#">YouTube Monetization Update: Key Changes for Video Ads</a></li>
+            <li><a href="#">YouTube Automation: Get AI-Powered Titles, Thumbnails, Descriptions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

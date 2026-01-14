@@ -1,0 +1,11 @@
+.page-wrapper { margin-top: 100px; padding: 28px 16px;  color: #e6f0ff; }
+.content { max-width: 900px; margin: 0 auto;background: #0f172a;  padding:28px; border-radius:12px; box-shadow:0 8px 28px rgba(2,6,23,0.6); color: #e6f0ff; }
+.content-mobile { padding:16px; margin:12px;background: #0f172a; border-radius:8px; color:#e6f0ff }
+
+h1 { margin-bottom:12px; color:#ffffff }
+h2 { margin-top:16px; color:#f1f8ff }
+
+/* Responsive */
+.desktop-only { display:block }
+.mobile-only { display:none }
+@media (max-width:767px) { .desktop-only{display:none} .mobile-only{display:block} }

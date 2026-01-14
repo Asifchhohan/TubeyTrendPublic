@@ -1,0 +1,80 @@
+<!-- signup.component.html -->
+<app-header *ngIf="(isMobile$ | async)"></app-header>
+<div class="min-h-screen flex">
+    <!-- Left Side: Branding & Testimonial -->
+    <div class="hidden lg:flex flex-1 bg-gradient-to-br from-black to-blue-900 text-white p-12 relative">
+      <h2 (click)="navigateToHome()" class="absolute top-6 left-6 text-2xl font-bold logo">Tubey<span class="text-blue-400">Trend</span></h2>
+      <div class="max-w-md self-center">
+        <p class="text-lg custom-text">
+          “We use TubeyTrend every day to manage keywords, audit video performance, and research what’s winning in our niche.”
+        </p>
+        <div class="flex items-center mt-6">
+          <img class="h-12 w-12 rounded-full mr-3" src="assets/sean-cannell.jpg" alt="Sean Cannell">
+          <div>
+            <p class="font-semibold">Sean Cannell</p>
+            <p class="text-sm text-gray-300">2.7M subs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Side: Signup Form -->
+    <div class="w-full lg:w-1/2 bg-[#292E48] text-white p-8 flex flex-col justify-center items-center">
+      <h2 class="text-3xl font-semibold mb-6">Sign up to TubeyTrend</h2>
+      
+      <button class="google-signup-btn" (click)="signUpWithGoogle()">
+        <img src="assets/googleIcon.png" alt="Google Logo" />
+        Sign up with Google
+      </button>
+      
+
+      <!-- <div id="google-SignUpbtn"></div> -->
+
+      
+      
+  
+      <!-- Signup Form -->
+      <form class="w-full max-w-sm  setMarginForm">
+        <div class="mb-4">
+          <label class="text-sm titlefont">Email</label>
+          <input type="email"[(ngModel)]="email" name="email" placeholder="Add your email" class="w-full bg-[#262b44] text-white text-sm py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 setInputRadius">
+        </div>
+  
+        <div class="mb-4">
+          <label class="text-sm titlefont">Password</label>
+          <div class="relative">
+            <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password"
+                   placeholder="Create a password" 
+                   class="w-full bg-[#262b44] text-white text-sm py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 setInputRadius"
+                   #passwordInput>
+            
+            <!-- Eye Icon Button -->
+            <span class="absolute right-3 top-3 cursor-pointer text-white" (click)="togglePassword()">
+              <i class="{{ showPassword ? 'fas fa-eye-slash' : 'fas fa-eye' }}"></i>
+            </span>
+            
+          </div>
+        </div>
+          
+  
+        <!-- Signup Button -->
+        <button (click)="onSubmit()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-lg">
+          Create your account
+        </button>
+            <!-- Terms & Privacy -->
+      <p class="text-xs text-gray-400 mt-4 text-center">
+        By creating a TubeyTrend account you agree with TubeyTrend <a href="#" class="text-blue-400">Terms of Service</a> and <a href="#" class="text-blue-400">Privacy Policy</a>.
+      </p>
+      <p class="text-xs text-gray-400 mt-4 text-center">
+        This site is protected by reCAPTCHA and the Google <a href="#" class="text-blue-400">Privacy Policy</a> and <a href="#" class="text-blue-400">Terms of Service</a>.
+      </p>
+      </form>  
+  
+      <!-- Already have an account -->
+      <p class="mt-6 text-sm text-center">Already have an account? <a href="login" class="text-blue-400 hover:underline">Log in</a></p>
+    </div>
+  </div>
+
+  <!-- <app-footer *ngIf="(isMobile$ | async)"></app-footer> -->
+  
+  

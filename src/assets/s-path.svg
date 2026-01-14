@@ -1,0 +1,13 @@
+<!-- s-path.svg (example) -->
+<svg width="300" height="600" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M150 0
+       C150 150, 50 150, 50 300
+       C50 450, 150 450, 150 600"
+    stroke="#2a2a3c"
+    stroke-width="6"
+    fill="none"
+  />
+</svg>
+
+

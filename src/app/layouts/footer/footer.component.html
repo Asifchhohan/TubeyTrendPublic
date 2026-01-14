@@ -1,0 +1,126 @@
+<div *ngIf="!(isMobile$ | async)">
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <h2 class="footer-logo">Tubey<span class="blue-text">Trend</span></h2>
+        <p class="footer-description">
+          At AI-Powered YouTube Video Idea Generator, we empower creators with AI-driven insights and viral trends to
+          maximize their reach.
+          Our cutting-edge technology delivers high-impact video ideas, SEO-optimized titles, and audience-focused
+          descriptions.
+          From beginners to pro YouTubers, our AI analyzes trends, predicts engagement, and streamlines content
+          creation,
+          so you never run out of ideas. No more guesswork—just smart, data-driven inspiration to help you grow faster
+          and smarter!
+        </p>
+        <p class="copyright">© 2025 TubeyTrend. All Rights Reserved.</p>
+      </div>
+
+      <!-- Middle Section - Links -->
+      <div class="footer-links setfooterLinkTopMargin">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a routerLink="/careers">Careers</a></li>
+            <li><a routerLink="/testimonials">Testimonials</a></li>
+            <li><a routerLink="/blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Product</h3>
+          <ul>
+            <li><a routerLink="/product/affiliates">Affiliates</a></li>
+            <li><a routerLink="/product/youtube-stats">YouTube Stats</a></li>
+            <li><a routerLink="/product/brand-solutions">Brand Solutions</a></li>
+            <li><a routerLink="/product/agency-solutions">Agency Solutions</a></li>
+            <li><a routerLink="/product/mcn-solutions">MCN Solutions</a></li>
+            <li><a routerLink="/product/browser-extension">Browser Extension</a></li>
+            <li><a routerLink="/product/academy">TubeyTrend Academy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Other</h3>
+          <ul>
+            <li><a routerLink="/contact">Contact</a></li>
+            <li><a routerLink="/terms">Terms</a></li>
+            <li><a routerLink="/privacy-policy">Privacy</a></li>
+            <li><a routerLink="/support">Support</a></li>
+            <li><a routerLink="/how-to-get-more-youtube-views">How To Get More YouTube Views</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section - Social Media -->
+      <div class="footer-right">
+        <h3>Connect with us</h3>
+        <p>Call Sales +92301-0622282-TubeyTrend</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Mobile footer -->
+<div *ngIf="isMobile$ | async" class="mobile-footer">
+  <div class="mobile-footer-top">
+    <h2 class="footer-logo">Trending<span class="blue-text">Tube</span></h2>
+    <p class="copyright">© 2025 TubeyTrend</p>
+  </div>
+
+  <p class="mobile-description">AI-driven insights and video ideas to help creators grow — brief tips, weekly playbooks,
+    and quick tools.</p>
+
+  <div class="mobile-sections">
+    <div class="mobile-section">
+      <button class="section-toggle" (click)="toggleSection('company')">Company <span class="chev">{{
+          mobileSectionsOpen.company ? '▾' : '▸' }}</span></button>
+      <ul class="nested-list" *ngIf="mobileSectionsOpen.company">
+        <li><a routerLink="/careers">Careers</a></li>
+        <li><a routerLink="/testimonials">Testimonials</a></li>
+        <li><a routerLink="/blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-section">
+      <button class="section-toggle" (click)="toggleSection('product')">Product <span class="chev">{{
+          mobileSectionsOpen.product ? '▾' : '▸' }}</span></button>
+      <ul class="nested-list" *ngIf="mobileSectionsOpen.product">
+        <li><a routerLink="/product/affiliates">Affiliates</a></li>
+        <li><a routerLink="/product/youtube-stats">YouTube Stats</a></li>
+        <li><a routerLink="/product/browser-extension">Browser Extension</a></li>
+        <li><a routerLink="/product/academy">TubeyTrend Academy</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-section">
+      <button class="section-toggle" (click)="toggleSection('other')">Other <span class="chev">{{
+          mobileSectionsOpen.other ? '▾' : '▸' }}</span></button>
+      <ul class="nested-list" *ngIf="mobileSectionsOpen.other">
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/terms">Terms</a></li>
+        <li><a routerLink="/privacy-policy">Privacy</a></li>
+        <li><a routerLink="/support">Support</a></li>
+        <li><a routerLink="/how-to-get-more-youtube-views">How To Get More YouTube Views</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mobile-socials">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,138 @@
+<!-- Desktop / non-mobile header -->
+<div *ngIf="!(isMobile$ | async)">
+  <header>
+    <nav>
+      <div class="nav-container">
+        <h2 class="logo" (click)="navigateToHome()">Tubey<span class="blue-text">Trend</span></h2>
+
+        <ul class="titles">
+          <li class="dropdown">
+            <button class="headerTextFont">Features
+              <i class="fa fa-chevron-down dropdownIcon"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="/viral-video-ideas">Trending Video Ideas</a>
+              <a routerLink="/trending-topics-finder">Trending Topics Finder</a>
+              <a routerLink="/title-generator">Title Generator</a>
+              <a routerLink="/competitor-insights">Competitor Insights</a>
+              <a routerLink="/content-optimizer">Content Optimizer</a>
+              <a routerLink="/overview">All Features </a>
+
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <button class="headerTextFont">AI Tools
+              <i class="fa fa-chevron-down dropdownIcon"></i>
+            </button>
+            <div class="dropdown-content">
+            <a routerLink="/ai-thumbnail-generator">AI Thumbnail Generator</a>
+            <a routerLink="/channel-name-generator">Channel Name Generator</a>
+             <a routerLink="/content-generator">Content Generator</a>
+             <a routerLink="/chatgpt-for-youtubers">ChatGPT for YouTubers</a>
+             <a routerLink="/viral-video-ideas">Trending YouTube Video Ideas Generator</a>
+             <a routerLink="/trending-keywords-hashtags">Trending Keyword Generator</a>
+             <a routerLink="/video-script-creator">Video Script Generator</a>
+             <a routerLink="/seo-optimized-descriptions">AI Description Generator</a>
+              <a routerLink="/trending-keywords-hashtags">Trending Tag Generator</a>
+            </div>
+          </li>
+
+          <li><button (click)="navigateToTopChannels()" class="headerTextFont">Top Trending YouTube Channels</button></li>
+          <li><a routerLink="/coaching" class="headerTextFont">Coaching</a></li>
+          <li><a routerLink="/extension" class="headerTextFont">Extension</a></li>
+
+          <li class="dropdown">
+            <button class="headerTextFont">Blog
+              <i class="fa fa-chevron-down dropdownIcon"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="/blog/views">Views</a>
+              <a routerLink="/blog/monetization">Monetization</a>
+              <a routerLink="/blog/subscribers">Subscribers</a>
+              <a routerLink="/blog/analytics">Analytics</a>
+              <a routerLink="/blog/all-tips-insights">All Tips & Insights</a>
+            </div>
+          </li>
+          <li><button (click)="navigateToPricing()" class="headerTextFont">Pricing</button></li>
+          <button class="headerTextFont loginbutton" (click)="navigateToLogin()">Login</button>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- Mobile header (added below the desktop block) -->
+<div *ngIf="isMobile$ | async">
+  <header class="mobile-header">
+    <div class="nav-container mobile-nav">
+      <h2 class="logo" (click)="navigateToHome()">Tubey<span class="blue-text">Trend</span></h2>
+      <div class="mobile-actions">
+        <button class="headerTextFont" (click)="toggleMobileMenu()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" *ngIf="mobileMenuOpen">
+    <div class="mobile-menu-header">
+      <h3>Menu</h3>
+      <button class="headerTextFont" (click)="toggleMobileMenu()">✕</button>
+    </div>
+    <ul class="mobile-menu-list">
+      <!-- Features collapsible -->
+      <li class="mobile-section">
+        <button class="section-toggle" (click)="toggleMobileSection('features')">
+          Features <span class="chev">{{ mobileSectionsOpen.features ? '▾' : '▸' }}</span>
+        </button>
+        <ul class="nested-list" *ngIf="mobileSectionsOpen.features">
+          <li><a routerLink="/viral-video-ideas" (click)="toggleMobileMenu()">Trending Video Ideas</a></li>
+          <li><a routerLink="/trending-topics-finder" (click)="toggleMobileMenu()">Trending Topics Finder</a></li>
+          <li><a routerLink="/title-generator" (click)="toggleMobileMenu()">Title Generator</a></li>
+          <li><a routerLink="/competitor-insights" (click)="toggleMobileMenu()">Competitor Insights</a></li>
+          <li><a routerLink="/content-optimizer" (click)="toggleMobileMenu()">Content Optimizer</a></li>
+          <li><a routerLink="/overview" (click)="toggleMobileMenu()">All Features</a></li>
+        </ul>
+      </li>
+
+      <!-- AI Tools collapsible -->
+      <li class="mobile-section">
+        <button class="section-toggle" (click)="toggleMobileSection('aiTools')">
+          AI Tools <span class="chev">{{ mobileSectionsOpen.aiTools ? '▾' : '▸' }}</span>
+        </button>
+        <ul class="nested-list" *ngIf="mobileSectionsOpen.aiTools">
+          <li><a routerLink="/ai-thumbnail-generator" (click)="toggleMobileMenu()">AI Thumbnail Generator</a></li>
+          <li><a routerLink="/channel-name-generator" (click)="toggleMobileMenu()">Channel Name Generator</a></li>
+          <li><a routerLink="/content-generator" (click)="toggleMobileMenu()">Content Generator</a></li>
+          <li><a routerLink="/chatgpt-for-youtubers" (click)="toggleMobileMenu()">ChatGPT for YouTubers</a></li>
+          <li><a routerLink="/viral-video-ideas" (click)="toggleMobileMenu()">Trending YouTube Video Ideas Generator</a></li>
+          <li><a routerLink="/trending-keywords-hashtags" (click)="toggleMobileMenu()">Trending Keyword Generator</a></li>
+          <li><a routerLink="/video-script-creator" (click)="toggleMobileMenu()">Video Script Generator</a></li>
+          <li><a routerLink="/seo-optimized-descriptions" (click)="toggleMobileMenu()">AI Description Generator</a></li>
+        </ul>
+      </li>
+
+      <!-- Direct links -->
+      <li><a routerLink="/coaching" (click)="toggleMobileMenu()">Coaching</a></li>
+      <li><a routerLink="/extension" (click)="toggleMobileMenu()">Extension</a></li>
+
+      <!-- Blog collapsible -->
+      <li class="mobile-section">
+        <button class="section-toggle" (click)="toggleMobileSection('blog')">
+          Blog <span class="chev">{{ mobileSectionsOpen.blog ? '▾' : '▸' }}</span>
+        </button>
+        <ul class="nested-list" *ngIf="mobileSectionsOpen.blog">
+          <li><a routerLink="/blog/views" (click)="toggleMobileMenu()">Views</a></li>
+          <li><a routerLink="/blog/monetization" (click)="toggleMobileMenu()">Monetization</a></li>
+          <li><a routerLink="/blog/subscribers" (click)="toggleMobileMenu()">Subscribers</a></li>
+          <li><a routerLink="/blog/analytics" (click)="toggleMobileMenu()">Analytics</a></li>
+          <li><a routerLink="/blog/all-tips-insights" (click)="toggleMobileMenu()">Tips & Insights</a></li>
+        </ul>
+      </li>
+
+      <li><button class="loginbutton" (click)="navigateToLogin()">Login</button></li>
+      <li><button class="headerTextFont" (click)="navigateToPricing()">Pricing</button></li>
+    </ul>
+  </div>
+</div>

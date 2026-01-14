@@ -1,0 +1,18 @@
+:root{--accent:#2563EB}
+.container{max-width:980px;margin:0 auto;padding:24px;margin-top: 100px;}
+.desktop-careers h1,.mobile-careers h1{font-size:28px;margin-bottom:8px}
+// .lead{color:#9aa3b2}
+.openings{display:flex;gap:20px;flex-wrap:wrap}
+.opening{background:#0f172a;padding:18px;border-radius:8px;flex:1 1 280px;color:#e6eef8}
+.opening h3{margin:0 0 6px;color:#fff}
+.opening .summary{margin:6px 0;color:#cfd9e6}
+.opening .responsibilities,.opening .qualifications{margin:8px 0 0 18px;color:#cbd7e6}
+.apply{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+.mobile-openings .opening-card{background:#071026;padding:14px;border-radius:8px;margin-bottom:12px;color:#e6eef8}
+.mobile-openings .opening-card h3{color:#fff}
+.mobile-openings .opening-card .summary{color:#cfd9e6;margin:6px 0}
+.mobile-openings .opening-card .meta{font-size:12px;color:#9aa3b2;margin-bottom:8px}
+@media(max-width:768px){.openings{flex-direction:column}}
+p{
+    margin-bottom: 8px;
+}

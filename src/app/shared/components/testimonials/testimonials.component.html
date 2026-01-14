@@ -1,0 +1,42 @@
+<div *ngIf="!(isMobile$ | async)" class="testimonials-page">
+  <app-header></app-header>
+  <main class="container">
+    <h1>What creators say about TubeyTrend</h1>
+    <p class="lead">Real creators, real results — short case studies and honest feedback from the community.</p>
+
+    <div class="testimonials">
+      <blockquote>
+        "TubeyTrend helped us find an angle that tripled our views in a week." — <strong>Alex, Creator (Gaming)</strong>
+      </blockquote>
+
+      <blockquote>
+        "AI titles and thumbnail tests saved us hours of work and increased CTR by 18%." — <strong>Rina, Producer</strong>
+      </blockquote>
+
+      <blockquote>
+        "Using the Trending Topics Finder we surfaced a series that grew subscribers 2.4x in two months." — <strong>Hammad, Creator</strong>
+      </blockquote>
+
+      <div class="case-study">
+        <h4>Case study: Small channel, big lift</h4>
+        <p>We worked with a 10k-subscriber educational channel to test title-first ideas. After three iterations recommended by TubeyTrend, average watch time rose 35% and impressions doubled.</p>
+      </div>
+
+      <p class="cta">Have a story? <a href="mailto:hello&#64;tubeytrend.com">Send us your results</a> — we may feature it.</p>
+    </div>
+  </main> 
+  <app-footer></app-footer>
+</div>
+
+<div *ngIf="isMobile$ | async" class="mobile-testimonials">
+  <app-header></app-header>
+  <main class="container">
+    <h1>Testimonials</h1>
+    <div class="slide-testimonials">
+      <div class="card">“TubeyTrend is our go-to for title inspiration.” — <strong>Sam, Creator</strong></div>
+      <div class="card">“Highly recommended for small channels — simple and practical.” — <strong>Noor, Creator</strong></div>
+      <div class="card">“Worth trying — the video ideas produced 3x more views than our previous uploads.” — <strong>Jamal, Producer</strong></div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

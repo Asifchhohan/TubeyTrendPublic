@@ -1,0 +1,5 @@
+.view-all { max-width: 900px; margin: 28px auto; background: #0d1622; padding: 18px; border-radius: 12px; border: 1px solid #233041; color: #e6eef6; }
+.view-all .plan-row { display:flex; justify-content:space-between; align-items:center; padding:12px 10px; border-bottom:1px solid #172033; }
+.view-all .plan-row .left { display:flex; flex-direction:column; }
+.view-all .plan-row .price { color:#9ca3af; font-size:13px; }
+.view-all button { background: linear-gradient(90deg,#3b82f6,#6366f1); border:none; color:white; padding:8px 12px; border-radius:8px; cursor:pointer; }
